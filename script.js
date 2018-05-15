@@ -107,12 +107,10 @@ $(document).ready(function () {
         }
     });
     
-    //grid-row-start setting
-    $(".gridstart").on("change", function () {
+    //grid-column-start setting
+    $(".container").delegate(".gridstart","change", function () {
         var selection = $(this).val();
-        console.log(selection);
-        console.log("test")
-        
+        var selectdiv = $(this).parent().css("grid-column-start", selection)
     });
 
     //generate css on click
