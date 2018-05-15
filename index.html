@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS GRID</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="commands" class="container-fluid shadow bg-light text-center">
+        <img src="images/logo.png" class="float-left">
+        <h1 class="text-left">CSS Grid</h1>
+        <span class="font-weight-bold">Add divs</span>
+        <button class="divs btn btn-primary" value="add">+</button>
+        <button class="divs btn bg-danger" value="remove">-</button>
+
+        <select id="display" class="custom-select" style="width:140px">
+            <option value="block" class="dropdown-item">display: block</option>
+            <option value="grid" class="dropdown-item">display: grid</option>
+        </select>
+
+        <select id="template" class="custom-select" style="width:205px">
+            <option value="grid-template-columns">grid-template-columns</option>
+            <option value="grid-template-rows">grid-template-rows</option>
+        </select>
+        <span>Value</span><input id="nbr" type="number" value=0 class="input-group-text">
+        
+        <span>grid-column-gap</span><input id="ColumnGap" type="number" value="0" class="input-group-text">
+        <span>grid-row-gap</span><input id="RowGap" type="number" value="0" class="input-group-text">
+
+
+        <select id="justify" class="custom-select" style="width:187px">
+            <option value="stretch">justify-items: stretch</option>
+            <option value="center">justify-items: center</option>
+            <option value="start">justify-items: start</option>
+            <option value="end">justify-items: end</option>
+        </select>
+
+
+        <select id="align" class="custom-select" style="width:187px">
+            <option value="stretch">align-items: stretch</option>
+            <option value="center">align-items: center</option>
+            <option value="start">align-items: start</option>
+            <option value="end">align-items: end</option>
+        </select>
+        <button id="gencss" class="btn btn-success float-right">Generate CSS</button>
+    </div>
+    <div class=""><!--Here comes the generated css--></div>
+    <div id="container" class="container"><!--Here comes the css grid divs created with Jquery--></div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
