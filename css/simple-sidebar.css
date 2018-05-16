@@ -9,7 +9,6 @@ body {
 }
 
 #wrapper {
-    /margin-top:50px; /*align sidebar with topbar */
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;

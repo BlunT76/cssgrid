@@ -79,6 +79,11 @@ img {
 .h1 {
     margin:0px;
 }
+
+#menu-toggle {
+    position: fixed;
+    z-index: 2;
+}
 /* CSS only for pageflex */
 
 
