@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     //grid-template-columns and grid-template-row settings
     //Use of var gtc and gtr because they share the same input value
-    $("#template")
+    /*$("#template")
         .change(function () {
             var selection = $("#template option:selected").val();
             if (selection === "grid-template-columns" && gtc > 0) {
@@ -34,25 +34,30 @@ $(document).ready(function () {
             } else {
                 $("#nbr").val(gtr);
             }
-        });
-
-    $("#nbr")
+        });*/
+    //grid-template-columns settings
+    $("#gtc")
         .change(function () {
             var nbrcolcss = "";
-            for (var i = 0; i < $("#nbr").val(); i++) {
-                nbrcolcss += $("#nbr").val() + "fr ";
+            for (var i = 0; i < $("#gtc").val(); i++) {
+                nbrcolcss += $("#gtc").val() + "fr ";
             }
-
-            var selection = $("#template option:selected").val();
-            $("#container").css(selection, nbrcolcss);
-            if (selection === "grid-template-columns") {
-                gtc = $("#nbr").val();
-                cssgtc = nbrcolcss;
-            } else {
-                gtr = $("#nbr").val();
-                cssgtr = nbrcolcss;
+            $("#container").css("grid-template-columns", nbrcolcss);
+            gtc = $("#gtc").val();
+            cssgtc = nbrcolcss;
+    });
+    
+    //grid-template-row settings
+    $("#gtr")
+        .change(function () {
+            var nbrrowcss = "";
+            for (var i = 0; i < $("#gtr").val(); i++) {
+                nbrrowcss += $("#gtr").val() + "fr ";
             }
-        });
+            $("#container").css("grid-template-rows", nbrrowcss);
+            gtr = $("#gtr").val();
+            cssgtr = nbrrowcss;
+    });
 
     //grid-column-gap setting in pixel
     $("#ColumnGap")

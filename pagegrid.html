@@ -18,70 +18,52 @@
         <h1 class="text-left">CSS Grid</h1>
     </div>
     <div id="wrapper">
-
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li>
+                <li class="d-flex align-items-center justify-content-between m-2">
                     <span class="font-weight-bold text-light">Add divs</span>
-                    <button class="divs btn btn-primary" value="add">+</button>
-                    <button class="divs btn bg-danger" value="remove">-</button>
+                    <div><button class="divs btn btn-primary" value="add">+</button>
+                    <button class="divs btn bg-danger" value="remove">-</button></div>
                 </li>
-                <li>
-                    <select id="display" class="custom-select" style="width:140px">
+                <li class="d-flex align-items-center justify-content-end m-2">
+                    <select id="display" class="custom-select ">
                         <option value="block" class="dropdown-item">display: block</option>
                         <option value="grid" class="dropdown-item">display: grid</option>
                     </select>
                 </li>
-                <li>
-                    <span>grid-template-columns</span><input id="nbr" type="number" value=0 class="input-group-text">
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="text-light">grid-template-columns</span><input id="gtc" type="number" value=0 class="input-group-text">
                 </li>
-                <li>
-                    <span>grid-template-rows</span><input id="nbr" type="number" value=0 class="input-group-text">
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="text-light">grid-template-rows</span><input id="gtr" type="number" value=0 class="input-group-text">
                 </li>
-                <li>
-                    <span>grid-column-gap</span><input id="ColumnGap" type="number" value="0" class="input-group-text">
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="text-light">grid-column-gap</span><input id="ColumnGap" type="number" value="0" class="input-group-text">
                 </li>
-                <li>
-                    <span>grid-row-gap</span><input id="RowGap" type="number" value="0" class="input-group-text">
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="text-light">grid-row-gap</span><input id="RowGap" type="number" value="0" class="input-group-text">
                 </li>
-                <li>
-                    <select id="justify" class="custom-select" style="width:187px">
+                <li class="d-flex align-items-center justify-content-end m-2">
+                    <select id="justify" class="custom-select">
                         <option value="stretch">justify-items: stretch</option>
                         <option value="center">justify-items: center</option>
                         <option value="start">justify-items: start</option>
                         <option value="end">justify-items: end</option>
                     </select>
                 </li>
-                <li>
-                    <select id="align" class="custom-select" style="width:187px">
+                <li class="d-flex align-items-center justify-content-end m-2">
+                    <select id="align" class="custom-select" >
                         <option value="stretch">align-items: stretch</option>
                         <option value="center">align-items: center</option>
                         <option value="start">align-items: start</option>
                         <option value="end">align-items: end</option>
                     </select>
                 </li>
-                <li>
+                <li class="d-flex align-items-center justify-content-center m-2">
                     <button id="gencss" class="btn btn-success">Generate CSS</button>
                 </li>
             </ul>
-            <!--<span class="font-weight-bold">Add divs</span>-->
-        
-
-        
-
-        
-        
-        
-        
-        
-
-
-        
-
-
-        
-        
         </div>
         <!-- /#sidebar-wrapper -->
 
