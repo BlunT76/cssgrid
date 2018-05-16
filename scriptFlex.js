@@ -35,12 +35,12 @@ $(document).ready(function () {
 
     function setFlexAttr() {
         var attrFlex=$(this).attr("id");
-        var valFlex=$(attrFlex+" option:selected").val();
-        //var selection = $("#justify option:selected").val();
+        //var valFlex=$(attrFlex).val();
+        var valFlex = $("#"+attrFlex+" option:selected").val();
         console.log(attrFlex);
         console.log(valFlex);
         //$("#display option:selected").val()
-        //$("#container").css(, this.attr(""));
+        $("#container").css(attrFlex, valFlex);
     }
 
 });
