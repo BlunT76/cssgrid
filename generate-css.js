@@ -1,14 +1,13 @@
 
-function popup(project) {
+function modal(formatedCode) {
     
-    document.getElementById("left-image").src = project.image;
-    document.getElementById("modalLabel").textContent = project.itemtitle;
-    document.getElementById("description").innerHTML = project.description;
+    document.getElementById("generated-code").innerHTML = formatedCode;
 }
 
-function project(image, itemtitle, description) {
+class formatedCSS {
 
-    this.image = image;
-    this.itemtitle = itemtitle;
-	this.description = description;
+    constructor (x) {
+
+        this.x = x;
+    }
 }
