@@ -29,7 +29,7 @@ grip-gap: [numeric value + mesure units]
 grid-auto-rows: [min] [max] [numeric value + div mesure units, Auto/Null]
 
 // Sur les contenus
-grid-column: [numeric value];
+grid-column: [numeric value]
 grid-row: [numeric value]
 
 
