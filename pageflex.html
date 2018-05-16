@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS GRID</title>
+    <title>Flexbox</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <div id="commands" class="container-fluid shadow bg-light text-center">
+    <div id="commands" class="navbar container-fluid shadow bg-light text-center">
         <img src="images/logo.png" class="float-left">
-        <h1 class="text-left">CSS Grid</h1>
+        <h1 class="text-left">Flexbox</h1>
     </div>
     <div id="wrapper" class="text-light">
         <!-- Sidebar -->
@@ -30,6 +30,13 @@
                     </div>
                 </li>
                 <hr class="bg-dark">
+                <li class="d-flex align-items-center justify-content-between">
+                    <!--flex-direction: [row | column | row-reverse | column-reverse]-->
+                    <select id="display" class="custom-select">
+                        <option value="block">display:block</option> 
+                        <option value="flex">display:flex</option>
+                    </select>
+                </li>
                 <li class="d-flex align-items-center justify-content-between">
                     <!--flex-direction: [row | column | row-reverse | column-reverse]-->
                     <select id="flex-direction" class="custom-select">
@@ -78,8 +85,8 @@
                         <option value="space-around">align-content:space-around</option>
                     </select>
                 </li>
-                <li>
-                    <button id="gencss" class="btn btn-success" type="button" onclick="modal();" data-toggle="modal" data-target="#myModal">Generate CSS</button>
+                <li class="d-flex mt-auto">
+                    <button id="gencss" class="btn btn-success" type="button" onclick="modal()" data-toggle="modal" data-target="#myModal">Generate CSS</button>
                 </li>
             </ul>
         </div>
@@ -114,7 +121,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <div class="row p-2 text-justify">
+                    <div class="row p-2 text-justify text-dark">
                         <p id="generated-code" class="card-text p-1">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                         </p>
@@ -128,14 +135,13 @@
         </div>  
 
     </div>
-<!--  -->
+<!--  
 
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    
     <script src="scriptFlex.js"></script>
     <script href="generate-css.js"></script>
     <!--Menu Toggle Script -->
