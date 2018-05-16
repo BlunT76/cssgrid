@@ -8,6 +8,7 @@
     <title>CSS GRID</title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
@@ -15,46 +16,66 @@
     <div id="commands" class="container-fluid shadow bg-light text-center">
         <img src="images/logo.png" class="float-left">
         <h1 class="text-left">CSS Grid</h1>
-        <span class="font-weight-bold">Add divs</span>
-        <button class="divs btn btn-primary" value="add">+</button>
-        <button class="divs btn bg-danger" value="remove">-</button>
-
-        <select id="display" class="custom-select" style="width:140px">
-            <option value="block" class="dropdown-item">display: block</option>
-            <option value="grid" class="dropdown-item">display: grid</option>
-        </select>
-
-        <select id="template" class="custom-select" style="width:205px">
-            <option value="grid-template-columns">grid-template-columns</option>
-            <option value="grid-template-rows">grid-template-rows</option>
-        </select>
-        <span>Value</span><input id="nbr" type="number" value=0 class="input-group-text">
-        
-        <span>grid-column-gap</span><input id="ColumnGap" type="number" value="0" class="input-group-text">
-        <span>grid-row-gap</span><input id="RowGap" type="number" value="0" class="input-group-text">
-
-
-        <select id="justify" class="custom-select" style="width:187px">
-            <option value="stretch">justify-items: stretch</option>
-            <option value="center">justify-items: center</option>
-            <option value="start">justify-items: start</option>
-            <option value="end">justify-items: end</option>
-        </select>
-
-
-        <select id="align" class="custom-select" style="width:187px">
-            <option value="stretch">align-items: stretch</option>
-            <option value="center">align-items: center</option>
-            <option value="start">align-items: start</option>
-            <option value="end">align-items: end</option>
-        </select>
-        <button id="gencss" class="btn btn-success" type="button" onclick="modal();" data-toggle="modal" data-target="#myModal">Generate CSS</button>
     </div>
-    <div id="container" class="container"><!--Here comes the css grid divs created with Jquery--></div>
-    <div class=""><!--Here comes the generated css--></div>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="font-weight-bold text-light">Add divs</span>
+                    <div><button class="divs btn btn-primary" value="add">+</button>
+                    <button class="divs btn bg-danger" value="remove">-</button></div>
+                </li>
+                <li class="d-flex align-items-center justify-content-end m-2">
+                    <select id="display" class="custom-select ">
+                        <option value="block" class="dropdown-item">display: block</option>
+                        <option value="grid" class="dropdown-item">display: grid</option>
+                    </select>
+                </li>
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="text-light">grid-template-columns</span><input id="gtc" type="number" value=0 class="input-group-text">
+                </li>
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="text-light">grid-template-rows</span><input id="gtr" type="number" value=0 class="input-group-text">
+                </li>
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="text-light">grid-column-gap</span><input id="ColumnGap" type="number" value="0" class="input-group-text">
+                </li>
+                <li class="d-flex align-items-center justify-content-between m-2">
+                    <span class="text-light">grid-row-gap</span><input id="RowGap" type="number" value="0" class="input-group-text">
+                </li>
+                <li class="d-flex align-items-center justify-content-end m-2">
+                    <select id="justify" class="custom-select">
+                        <option value="stretch">justify-items: stretch</option>
+                        <option value="center">justify-items: center</option>
+                        <option value="start">justify-items: start</option>
+                        <option value="end">justify-items: end</option>
+                    </select>
+                </li>
+                <li class="d-flex align-items-center justify-content-end m-2">
+                    <select id="align" class="custom-select" >
+                        <option value="stretch">align-items: stretch</option>
+                        <option value="center">align-items: center</option>
+                        <option value="start">align-items: start</option>
+                        <option value="end">align-items: end</option>
+                    </select>
+                </li>
+                <li class="d-flex align-items-center justify-content-center m-2">
+                    <button id="gencss" class="btn btn-success">Generate CSS</button>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-
-<!-- Modal Widow under command of the "Generate CSS bouton" -->
+        <!-- Page Content-wrapper -->
+        <div id="page-content-wrapper">
+            <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+            <div id="container" class="container"><!--Here comes the css grid divs created with Jquery--></div>
+        </div>
+    </div>
+    
+    
+    <!-- Modal Widow under command of the "Generate CSS bouton" -->
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                         
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -82,13 +103,19 @@
 
     </div>
 <!--  -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     
+    
     <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="scriptGrid.js"></script>
     <script href="generate-css.js"></script>
-    
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 </body>
 </html>
