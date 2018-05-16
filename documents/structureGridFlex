@@ -1,0 +1,13 @@
+display: flex;
+
+// Sur le container
+flex-direction: [row | column | row-reverse | column-reverse]
+justify-content: [flex-start | flex-end | center | space-between | space-around]
+flex-wrap: [wrap | nowrap | wrap-reverse]
+align-items: [stretch | flex-start | flex-end | center | baseline]
+align-content: [stretch | flex-start | flex-end | center | space-between | space-around]
+
+// sur les items
+order: <number>
+flex-grow: <number>
+align-self: [flex-start | flex-end | center | baseline |stretch]
