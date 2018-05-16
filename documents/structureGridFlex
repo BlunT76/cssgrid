@@ -1,13 +1,74 @@
+
+Ce qui doit pouvoir être expérimenté à l'utilisation de notre outils.
+
+
+// FLEX BOX //
+
 display: flex;
 
-// Sur le container
+// Sur les containers
 flex-direction: [row | column | row-reverse | column-reverse]
 justify-content: [flex-start | flex-end | center | space-between | space-around]
 flex-wrap: [wrap | nowrap | wrap-reverse]
 align-items: [stretch | flex-start | flex-end | center | baseline]
 align-content: [stretch | flex-start | flex-end | center | space-between | space-around]
 
-// sur les items
+// sur les contenus
 order: <number>
 flex-grow: <number>
 align-self: [flex-start | flex-end | center | baseline |stretch]
+
+
+// CSS GRID //
+
+display: grid;
+
+// Sur les containers
+grid-template / grid-template-areas / grid-template-rows / grid-template-columns: [numeric value + div mesure units][numeric value + div mesure units][numeric value + div mesure units]
+grip-gap: [numeric value + mesure units]
+grid-auto-rows: [min] [max] [numeric value + div mesure units, Auto/Null]
+
+// Sur les contenus
+grid-column: [numeric value];
+grid-row: [numeric value]
+
+
+
+/////////////////////////////////////////////////////////////////
+Pour la présentation
+/////////////////////////////////////////////////////////////////
+FLEX BOX
+//////////////////////////////
+
+Point - Le nouvel attribut de la propriété display : "flex"
+( présentation succinte de cette nouvelle fonctionnalité )
+Exemple :
+
+Point - Justify-content / Align-items et le stretch
+( La base // Disposer le contenu présent dans les containers )
+Exemple :
+
+Point - Flex directions 
+( La diversification de l'affichage des contenus )
+Exemple :
+
+Point - Aign-self / order
+( Le contenu plus avancé // Le postionnemen individuel et 
+Exemple :
+
+//////////////////////////////
+CSS GRID
+//////////////////////////////
+
+Point - Le nouvel attribut de la propriété display : "Grid"
+( présentation succinte de cette nouvelle fonctionnalité )
+Exemple :
+
+Point - Les grids template / grid gap
+( Les bases // Le positionnement de base des divs )
+Exemple :
+
+Point - Les propriétés individuelles des contenus ( grid column et row)
+( Le contenu plus avancé // Obtenir une disposition moins générique et toujours aussi dynamique )
+Exemple :
+
