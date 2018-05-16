@@ -10,6 +10,8 @@
 
 
 $(document).ready(function () {
+    //e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
     var divcount = 0;
     var gtc = "";
     var gtr = "";

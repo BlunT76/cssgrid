@@ -57,8 +57,28 @@ img {
     width:50px;
     height:auto;
     margin-right: 20px;
+    /margin-top: auto;
+    /padding-bottom: 10px;
 }
 
+.affix {
+    /top: 50px;
+    padding: 0px;
+    position: fixed;
+    background: #446433;
+    top: auto;
+    width: 100%;
+    z-index: 2;
+}
+
+.btn-black {
+    background-color: #050505;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.h1 {
+    margin:0px;
+}
 /* CSS only for pageflex */
 
 
