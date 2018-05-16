@@ -34,7 +34,7 @@ body {
 
 #container {
     width:800px;
-    height:500px;
+    height:550px;
     border: solid 2px;
     color: #EEEEEE;
     font-size: 1em;
@@ -69,6 +69,7 @@ img {
     margin-right: 20px;
 }
 
-/* CSS only for pageflex */
-
-
+.btn-black {
+    background-color: #050505;
+    border-radius: 0px 20px 20px 0px;
+}

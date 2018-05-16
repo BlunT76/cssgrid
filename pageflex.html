@@ -14,10 +14,31 @@
 </head>
 
 <body>
-    <div id="commands" class="navbar container-fluid shadow bg-light text-center">
-        <img src="images/logo.png" class="float-left">
-        <h1 class="text-left">Flexbox</h1>
-    </div>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+    <img src="./images/logo.png" width="30" height="30" alt="">
+  </a>
+  <a class="navbar-brand" href="#">Flexbox</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pagegrid.html">CSS Grid</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  disabled" href="#">Flex-Box</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <!--Navbar text with an inline element-->
+    </span>
+  </div>
+</nav>
     <div id="wrapper" class="text-light">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -93,7 +114,7 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <a href="#menu-toggle" class="btn btn-danger btn-secondary" id="menu-toggle">></a>
+        <a href="#menu-toggle" class="btn btn-black btn-sm text-bold" id="menu-toggle">></a>
         <div id="page-content-wrapper">
             
             <div id="container" class="container-fluid">
