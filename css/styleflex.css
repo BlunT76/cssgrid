@@ -9,12 +9,13 @@ body {
 }
 
 #commands {
-    border: none;
+    color:black;
+    /*border: none;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
     color: #323232;
-    border-radius: 0px;
+    border-radius: 0px;*/
 }
 
 .divjq {

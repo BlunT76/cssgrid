@@ -23,19 +23,7 @@ $(document).ready(function () {
             $("#container").css("display", selection);
             //console.log(selection);
         });
-
-    //grid-template-columns and grid-template-row settings
-    //Use of var gtc and gtr because they share the same input value
-    /*$("#template")
-        .change(function () {
-            var selection = $("#template option:selected").val();
-            if (selection === "grid-template-columns" && gtc > 0) {
-                $("#nbr").val(gtc);
-            } else {
-                $("#nbr").val(gtr);
-            }
-        });*/
-    //grid-template-columns settings
+    
     $("#gtc")
         .change(function () {
             var nbrcolcss = "";
@@ -96,27 +84,11 @@ $(document).ready(function () {
         });
 
     //Add or remove div on button click
-    //First we create an array with the html content
-    /*htmlarray = [
-        '<div id="divjq', divcount, ' class="border border-light divjq">',
-        '<h3>', divcount, '</h3>',
-        '<span>grid-column-start</span>',
-        '<input class="gridstart" type="number" value="0" >',
-        '<p></p>',
-        '<span>grid-column-end</span>',
-        '<input class="gridend" type="number" value="0" >',
-        '</div>'
-    ]*/
-    
-    //console.log(htmlarray.join(''))
-    
     $(".divs").click(function () {
 
         var selection = $(this).attr("value");
         if (selection === "add") {
             divcount++;
-            //$("#container").append(htmlarray.join(''))
-            //console.log(htmlarray.join(''))
             $("#container").append('<div id="divjq' + divcount + '" class="border border-light divjq"><h3>' + divcount + '</h3><span>grid-column-start</span><input class="colstart" type="number" value="0" ><p></p><span>grid-column-end</span><input class="colend" type="number" value="0" ><p></p><span>grid-row-start</span><input class="rowstart" type="number" value="0" ><p></p><span>grid-row-end</span><input class="rowend" type="number" value="0" ></div>');
 
         } else {
