@@ -48,12 +48,48 @@
             <option value="start">align-items: start</option>
             <option value="end">align-items: end</option>
         </select>
-        <button id="gencss" class="btn btn-success">Generate CSS</button>
+        <button id="gencss" class="btn btn-success" type="button" onclick="popup(mpc);" data-toggle="modal" data-target="#myModal">Generate CSS</button>
     </div>
-    <div class=""><!--Here comes the generated css--></div>
     <div id="container" class="container"><!--Here comes the css grid divs created with Jquery--></div>
+    <div class=""><!--Here comes the generated css--></div>
 
+
+<!-- Modal Widow under command of the "Generate CSS bouton" -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                        
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title" id="modalLabel"></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row p-2 text-justify">
+                        <p id="description" class="card-text p-1">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Copy to clipboard</button>
+                </div>
+            </div>
+        </div>  
+
+    </div>
+<!--  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    
     <script src="scriptGrid.js"></script>
+    <!-- <script href="generate-css.js"></script> -->
+    
 </body>
 </html>
