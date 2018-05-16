@@ -36,7 +36,7 @@ function modal(formatedCode) {
 // Ceci est un objet qui contiendra toutes les valeurs des propriétés css, ainsi que leurs noms sous forme de string ( pour une facilité d'affichage des noms )
 // Ici le choix d'un objet contenant des objets est plus pertinent que celui d'une classe car ce sont des valeurs qui ne dépendent que d'une div en html.
 // On peut donc prévoir son contenu
-var containerCSS = {
+var containerCSS = [
 
     // Le Display en cours sur le container
     display : {name : "display", value : null},
@@ -57,16 +57,7 @@ var containerCSS = {
     grid_auto_rows : { name : "grid-auto-rows", value : null},
 
     children : [] /* Contient des objets "cssContentCSS" */
-}
-
-// Si le systeme avec d'inception, d'objets dans des objets, vous dégoute.... je laisse une petite classe ici "au cas ou" pour les propriétés css...
-//   Cela n'aura aucun impact sur la synthaxe des requettes, juste sur la synthaxe du contenu de l'pobjet "containerCSS"
-/*class property {
-    constructor (name, value) {
-        this.name = name;
-        this.value = value;
-    }
-}*/
+];
 
 
 // Ici impossible de passer à coté du systeme de classe si l'on veut faire un algorythme simple d'utilisation et de maintenance.
@@ -84,3 +75,21 @@ class cssContentCSS {
         this.grid_column = { name : "grid-column", value : grid_column_value };
     }
 }
+
+
+
+
+
+
+
+
+
+
+// Si le systeme avec d'inception, d'objets dans des objets, vous dégoute.... je laisse une petite classe ici "au cas ou" pour les propriétés css...
+//   Cela n'aura aucun impact sur la synthaxe des requettes, juste sur la synthaxe du contenu de l'pobjet "containerCSS"
+/*class property {
+    constructor (name, value) {
+        this.name = name;
+        this.value = value;
+    }
+}*/
