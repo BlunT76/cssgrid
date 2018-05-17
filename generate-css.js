@@ -5,9 +5,9 @@ function modal(formatedCode) {
     //CODE DE RECUPERATION DES PROPRIETES
     var container = document.getElementById("container");
     //Pour le parent ( un "for" de moins )
-    for (property of ) {
+    // for (property of ) {
 
-    }
+    // }
     //Pour les enfants
     for (childNodes of container.childNodes) {
 
