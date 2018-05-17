@@ -131,15 +131,24 @@ $(document).ready(function () {
         });
 
     //generate css on click (wip)
+
+    var display;
+    var gridc;
+    var gridr;
+    var cgap;
+    var rgap;
+    var jitems;
+    var aitems;
+
     $("#gencss")
         .click(function () {
-            var display = "display: " + $("#container").css("display")
-            var gridc = "grid-template-columns: " + cssgtc;
-            var gridr = "grid-template-rows: " + cssgtr;
-            var cgap = "grid-column-gap: " + $("#ColumnGap").val() + "px";
-            var rgap = "grid-row-gap: " + $("#RowGap").val() + "px";
-            var jitems = "justify-items: " + $("#justify option:selected").val();
-            var aitems = "align-items: " + $("#align option:selected").val();
+            display = "display: " + $("#container").css("display");
+            gridc = "grid-template-columns: " + cssgtc;
+            gridr = "grid-template-rows: " + cssgtr;
+            cgap = "grid-column-gap: " + $("#ColumnGap").val() + "px";
+            rgap = "grid-row-gap: " + $("#RowGap").val() + "px";
+            jitems = "justify-items: " + $("#justify option:selected").val();
+            aitems = "align-items: " + $("#align option:selected").val();
             console.log(display)
             console.log(gridc);
             console.log(gridr);

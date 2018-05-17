@@ -68,6 +68,7 @@ function modal(formatedCode) {
 }
 
 
+
 // Ceci est un objet qui contiendra toutes les valeurs des propriétés css, ainsi que leurs noms sous forme de string ( pour une facilité d'affichage des noms )
 // Ici le choix d'un objet contenant des objets est plus pertinent que celui d'une classe car ce sont des valeurs qui ne dépendent que d'une div en html.
 // On peut donc prévoir son contenu
@@ -100,7 +101,8 @@ var containerCSS = {
 // (et ce serait pénible d'itérer un grand nombre d'objets qui suivraient du coup le meme chéma que le "containerCSS".)
 class contentCSS {
 
-    constructor (align_self_value, flex_grow_value, order_value, grid_row_value, grid_column_value) {
+    constructor (divName, align_self_value, flex_grow_value, order_value, grid_row_value, grid_column_value) {
+        this.divName = divName
 // FLEX : sur les contenus
         this.align_self = { name : "align-self", value : align_self_value };
         this.flex_grow = { name : "flex-grox", value : flex_grow_value };
