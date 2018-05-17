@@ -51,11 +51,13 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="d-flex align-items-center justify-content-between m-2">
-                    <span class="font-weight-bold text-light">Add divs</span>
-                    <div><button class="divs btn btn-primary" value="add">+</button>
-                    <button class="divs btn bg-danger" value="remove">-</button></div>
+                <li class="d-flex align-items-center justify-content-center m-2">
+                    <button class="divs btn btn-primary" value="add">+</button>
+                    <span class="font-weight-bold text-light ml-0 mr-3">Add divs</span>
+                    
+                    <button class="divs btn bg-danger text-light" value="remove">-</button>
                 </li>
+                <hr class="bg-dark mt-1">
                 <li class="d-flex align-items-center justify-content-end m-2">
                     <select id="display" class="custom-select ">
                         <option value="block" class="dropdown-item">display: block</option>
@@ -91,7 +93,7 @@
                     </select>
                 </li>
                 <li class="d-flex align-items-center justify-content-center m-2">
-                    <button id="gencss" class="btn btn-success" type="button" onclick="modal();" data-toggle="modal" data-target="#myModal">Generate CSS</button>
+                    <button id="gencss" class="btn btn-success btn-block" type="button" onclick="modal();" data-toggle="modal" data-target="#myModal">Generate CSS</button>
                 </li>
             </ul>
         </div>
