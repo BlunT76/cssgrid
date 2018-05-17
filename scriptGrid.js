@@ -91,7 +91,7 @@ $(document).ready(function () {
         var selection = $(this).attr("value");
         if (selection === "add") {
             divcount++;
-            $("#container").append('<div id="divjq' + divcount + '" class="border border-light divjq"><h3>' + divcount + '</h3><span>grid-column-start</span><input class="colstart" type="number" value="0" ><p></p><span>grid-column-end</span><input class="colend" type="number" value="0" ><p></p><span>grid-row-start</span><input class="rowstart" type="number" value="0" ><p></p><span>grid-row-end</span><input class="rowend" type="number" value="0" ></div>');
+            $("#container").append('<div id="divjq' + divcount + '" class="border border-light divjq"><h3>' + divcount + '</h3><p>grid-column-start</p><input class="colstart" type="number" value="0" ><p>grid-column-end</p><input class="colend" type="number" value="0" ><p>grid-row-start</p><input class="rowstart" type="number" value="0" ><p>grid-row-end</p><input class="rowend" type="number" value="0" ></div>');
 
         } else {
             if (divcount > 0) {

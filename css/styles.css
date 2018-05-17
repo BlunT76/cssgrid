@@ -7,6 +7,10 @@ body {
     background: #313234;
 }
 
+p{
+    margin-bottom:0px;
+}
+
 #commands {
     /border: none;
     /padding-top: 20px;
@@ -20,8 +24,8 @@ body {
     border: solid 2px #F4F5F6;
     color: #EEEEEE;
     font-size: 1em;
-    text-align: right;
-    padding-right:50%;
+    text-align: center;
+    /padding-right:33%;
     padding-bottom:15px;
     border-radius: 5px;
 }
@@ -33,6 +37,7 @@ body {
     border-radius: 5px;
     color: #EEEEEE;
     padding: 3px;
+    line-height: 1em;
 }
 
 input {
