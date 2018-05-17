@@ -8,7 +8,6 @@
     align-items: stretch;
  }*/
 
-
 $(document).ready(function () {
     //e.preventDefault();
         $("#wrapper").toggleClass("toggled");
@@ -132,30 +131,24 @@ $(document).ready(function () {
 
     //generate css on click (wip)
 
-    var display;
-    var gridc;
-    var gridr;
-    var cgap;
-    var rgap;
-    var jitems;
-    var aitems;
-
     $("#gencss")
         .click(function () {
-            display = "display: " + $("#container").css("display");
-            gridc = "grid-template-columns: " + cssgtc;
-            gridr = "grid-template-rows: " + cssgtr;
-            cgap = "grid-column-gap: " + $("#ColumnGap").val() + "px";
-            rgap = "grid-row-gap: " + $("#RowGap").val() + "px";
-            jitems = "justify-items: " + $("#justify option:selected").val();
-            aitems = "align-items: " + $("#align option:selected").val();
-            console.log(display)
-            console.log(gridc);
-            console.log(gridr);
-            console.log(cgap);
-            console.log(rgap);
-            console.log(jitems);
-            console.log(aitems);
+
+            containerCSS.display = "display: " + $("#container").css("display");
+            containerCSS.grid_template_columns = "grid-template-columns: " + cssgtc;
+            containerCSS.grid_template_rows = "grid-template-rows: " + cssgtr;
+            containerCSS.grid_column_gap = "grid-column-gap: " + $("#ColumnGap").val() + "px";
+            containerCSS.grid_row_gap = "grid-row-gap: " + $("#RowGap").val() + "px";
+            containerCSS.jitems = "justify-items: " + $("#justify option:selected").val();
+            containerCSS.aitems = "align-items: " + $("#align option:selected").val();
+            
+            console.log(containerCSS.display)
+            console.log(containerCSS.grid_template_columns);
+            console.log(containerCSS.grid_template_rows);
+            console.log(containerCSS.grid_column_gap);
+            console.log(containerCSS.grid_row_gap);
+            console.log(containerCSS.jitems);
+            console.log(containerCSS.aitems);
 
             //$("#container").css("align-items", selection);
             //console.log(selection);
