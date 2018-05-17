@@ -1,8 +1,21 @@
 
 function modal(formatedCode) {
 
-    var gCode =  document.getElementById("generated-code").innerHTML;
-    
+
+    //CODE DE RECUPERATION DES PROPRIETES
+    var container = document.getElementById("container");
+    //Pour le parent ( un "for" de moins )
+    for (property of ) {
+
+    }
+    //Pour les enfants
+    for (childNodes of container.childNodes) {
+
+    }
+
+    // CODE DE FORMATAGE ET D'INSTANCIATION DES PROPRIETES
+
+    var gCode =  document.getElementById("generated-code");
     // Créé les deux paragraphe qui acceuilleront le css
     gCode.innerHTML = 
     `<p id="container-code">
@@ -12,14 +25,16 @@ function modal(formatedCode) {
     /* Contents' CSS */ <br>
     </p>`;
 
-    // Début de synthaxe de la propriété css parente
-    gCode.innerHTML += `.container { <br>`; 
+    var containerCode = document.getElementById("container-code");
+    var contentCode = document.getElementById("content-code");
+    //On commence par instancier les propriétés du conteneur
+    // Début de synthaxe de la propriété css conteneur
+    containerCode.innerHTML += `.container { <br>`; 
     console.log(containerCSS);
-
     // 
     for (property of containerCSS) {
         if (property.value != null) {
-           gCode.innerHTML += `
+            containerCode.innerHTML += `
             .
            ` + property.name + `
              : 
@@ -28,15 +43,35 @@ function modal(formatedCode) {
         }
     }
     console.log(containerCSS);
-    // Fermeture de la propriété css parent
-    gCode.innerHTML += `} <br>`; 
+    // Fermeture de la propriété css conteneur
+    containerCode.innerHTML += `} <br>`; 
+
+    //On passe aux div contenues dans le conteneur
+    // A remplacer par un for of 
+    for (child of containerCSS.children) {
+    // Début de synthaxe de la propriété css d'un contenu        
+        contentCode.innerHTML += `.` + child.name + ` { <br>`;
+    //
+        for (property of child) {
+            if (property.value != null) {
+                contentCode.innerHTML += `
+                .
+                ` + property.name + `
+                    : 
+                ` + property.value + `
+                ; <br>`;
+            }
+        }
+    // Fermeture de la propriété css d'un contenu
+        contentCode.innerHTML += `} <br><br>`;
+    }
 }
 
 
 // Ceci est un objet qui contiendra toutes les valeurs des propriétés css, ainsi que leurs noms sous forme de string ( pour une facilité d'affichage des noms )
 // Ici le choix d'un objet contenant des objets est plus pertinent que celui d'une classe car ce sont des valeurs qui ne dépendent que d'une div en html.
 // On peut donc prévoir son contenu
-var containerCSS = [
+var containerCSS = {
 
     // Le Display en cours sur le container
     display : {name : "display", value : null},
@@ -56,14 +91,14 @@ var containerCSS = [
     grid_gap : { name : "grid-gap", value : null},
     grid_auto_rows : { name : "grid-auto-rows", value : null},
 
-    children : [] /* Contient des objets "cssContentCSS" */
-];
+    children : [] /* Contient des objets "contentCSS" */
+}
 
 
 // Ici impossible de passer à coté du systeme de classe si l'on veut faire un algorythme simple d'utilisation et de maintenance.
 // Il est difficile de prévoir le nombre maximum de div qui seront instanciées dans le container
 // (et ce serait pénible d'itérer un grand nombre d'objets qui suivraient du coup le meme chéma que le "containerCSS".)
-class cssContentCSS {
+class contentCSS {
 
     constructor (align_self_value, flex_grow_value, order_value, grid_row_value, grid_column_value) {
 // FLEX : sur les contenus
