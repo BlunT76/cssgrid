@@ -43,22 +43,22 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="d-flex align-items-center justify-content-between">
-                    <span class="font-weight-bold">Add divs</span>
-                    <div class="buttonsdivs">
+                <li class="d-flex align-items-center justify-content-center">
+                    <div class="buttonsdivs mt-2">
                         <button class="divs btn btn-primary" value="add">+</button>
+                        <span class="font-weight-bold text-light ml-0 mr-3">Add divs</span>
                         <button class="divs btn bg-danger text-light" value="remove">-</button>
                     </div>
                 </li>
                 <hr class="bg-dark">
-                <li class="d-flex align-items-center justify-content-between">
+                <li class="d-flex align-items-center justify-content-between m-2">
                     <!--flex-direction: [row | column | row-reverse | column-reverse]-->
                     <select id="display" class="custom-select">
                         <option value="block">display:block</option> 
                         <option value="flex">display:flex</option>
                     </select>
                 </li>
-                <li class="d-flex align-items-center justify-content-between">
+                <li class="d-flex align-items-center justify-content-between m-2">
                     <!--flex-direction: [row | column | row-reverse | column-reverse]-->
                     <select id="flex-direction" class="custom-select">
                         <option value="row">flex-direction:row</option> 
@@ -67,7 +67,7 @@
                         <option value="column-reverse">flex-direction:column-reverse</option>
                     </select>
                 </li>
-                <li class="d-flex align-items-center justify-content-between">
+                <li class="d-flex align-items-center justify-content-between m-2">
                     <!--justify-content: [flex-start | flex-end | center | space-between | space-around]-->
                     <select id="justify-content" class="custom-select">
                         <option value="flex-start">justify-content:flex-start</option> 
@@ -77,7 +77,7 @@
                         <option value="space-around">justify-content:space-around</option>
                     </select>
                 </li>
-                <li class="d-flex align-items-center justify-content-between">
+                <li class="d-flex align-items-center justify-content-between m-2">
                     <!--flex-wrap: [wrap | nowrap | wrap-reverse]-->
                     <select id="flex-wrap" class="custom-select">
                         <option value="wrap">flex-wrap:wrap</option> 
@@ -85,7 +85,7 @@
                         <option value="wrap-reverse">flex-wrap:wrap-reverse</option>
                     </select>
                 </li>
-                <li class="d-flex align-items-center justify-content-between">
+                <li class="d-flex align-items-center justify-content-between m-2">
                     <!--align-items: [stretch | flex-start | flex-end | center | baseline]-->
                     <select id="align-items" class="custom-select">
                         <option value="stretch">align-items:stretch</option> 
@@ -95,7 +95,7 @@
                         <option value="baseline">align-items:baseline</option>
                     </select>
                 </li>
-                <li class="d-flex align-items-center justify-content-between">
+                <li class="d-flex align-items-center justify-content-between m-2">
                     <!--align-content: [stretch | flex-start | flex-end | center | space-between | space-around]-->
                     <select id="align-content" class="custom-select">
                         <option value="stretch">align-content:stretch</option> 
@@ -106,8 +106,8 @@
                         <option value="space-around">align-content:space-around</option>
                     </select>
                 </li>
-                <li class="d-flex mt-auto">
-                    <button id="gencss" class="btn btn-success" type="button" onclick="modal()" data-toggle="modal" data-target="#myModal">Generate CSS</button>
+                <li class="d-flex mt-auto m-2 ">
+                    <button id="gencss" class="btn btn-success btn-block" type="button" onclick="modal()" data-toggle="modal" data-target="#myModal">Generate CSS</button>
                 </li>
             </ul>
         </div>
