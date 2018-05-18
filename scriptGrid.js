@@ -95,7 +95,6 @@ $(document).ready(function () {
 
         } else {
             if (divcount > 0) {
-                $("#gridstart" + divcount).remove();
                 $("#divjq" + divcount).remove();
                 divcount--;
             }
