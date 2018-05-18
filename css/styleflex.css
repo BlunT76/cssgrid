@@ -30,7 +30,10 @@ body {
     border-radius: 5px;
 }
 
-
+#menu-toggle{
+    position: fixed;
+    z-index: 2;
+}
 
 #container {
     width:800px;
