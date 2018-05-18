@@ -1,69 +1,4 @@
 
-function modal(formatedCode) {
-
-    //CODE DE RECUPERATION DES PROPRIETES
-    var container = document.getElementById("container");
-    //Pour le parent ( un "for" de moins )
-    // for (property of ) {
-
-    // }
-    //Pour les enfants
-    // for (childNodes of container.childNodes) {
-
-    // }
-
-    // CODE DE FORMATAGE ET D'INSTANCIATION DES PROPRIETES
-
-    var gCode =  document.getElementById("generated-code");
-    // Créé les deux paragraphe qui acceuilleront le css
-    gCode.innerHTML = 
-    `<p id="container-code">
-    /* Container's CSS */ <br>
-    </p>
-    <p id="content-code">
-    /* Contents' CSS */ <br>
-    </p>`;
-
-    var containerCode = document.getElementById("container-code");
-    var contentCode = document.getElementById("content-code");
-    //On commence par instancier les propriétés du conteneur
-    // Début de synthaxe de la propriété css conteneur
-    containerCode.innerHTML += `.container { <br>`; 
-    // 
-    for (property of containerCSS) {
-        if (property.value != null) {
-            containerCode.innerHTML += `
-            .
-           ` + property.name + `
-             : 
-           ` + property.value + `
-           ; <br>`;
-        }
-    }
-    console.log(containerCSS);
-    // Fermeture de la propriété css conteneur
-    containerCode.innerHTML += `} <br>`; 
-
-    //On passe aux div contenues dans le conteneur
-    // A remplacer par un for of 
-    // for (child of containerCSS.children) {
-    // // Début de synthaxe de la propriété css d'un contenu        
-    //     contentCode.innerHTML += `.` + child.name + ` { <br>`;
-    // //
-    //     for (property of child) {
-    //         if (property.value != null) {
-    //             contentCode.innerHTML += `
-    //             .
-    //             ` + property.name + `
-    //                 : 
-    //             ` + property.value + `
-    //             ; <br>`;
-    //         }
-    //     }
-    // // Fermeture de la propriété css d'un contenu
-    //     contentCode.innerHTML += `} <br><br>`;
-    }
-}
 
 
 
@@ -129,3 +64,70 @@ class contentCSS {
         this.value = value;
     }
 }*/
+
+
+function modal(formatedCode) {
+
+    //CODE DE RECUPERATION DES PROPRIETES
+    var container = document.getElementById("container");
+    //Pour le parent ( un "for" de moins )
+    // for (property of ) {
+
+    // }
+    //Pour les enfants
+    // for (childNodes of container.childNodes) {
+
+    // }
+
+    // CODE DE FORMATAGE ET D'INSTANCIATION DES PROPRIETES
+
+    var gCode =  document.getElementById("generated-code");
+    // Créé les deux paragraphe qui acceuilleront le css
+    gCode.innerHTML = 
+    `<p id="container-code">
+    /* Container's CSS */ <br>
+    </p>
+    <p id="content-code">
+    /* Contents' CSS */ <br>
+    </p>`;
+
+    var containerCode = document.getElementById("container-code");
+    var contentCode = document.getElementById("content-code");
+    //On commence par instancier les propriétés du conteneur
+    // Début de synthaxe de la propriété css conteneur
+    containerCode.innerHTML += `.container { <br>`; 
+    // 
+    for (property of containerCSS) {
+        if (property.value != null) {
+            containerCode.innerHTML += `
+            .
+           ` + property.name + `
+             : 
+           ` + property.value + `
+           ; <br>`;
+        }
+    }
+    console.log(containerCSS);
+    // Fermeture de la propriété css conteneur
+    containerCode.innerHTML += `} <br>`; 
+
+    //On passe aux div contenues dans le conteneur
+    // A remplacer par un for of 
+    // for (child of containerCSS.children) {
+    // // Début de synthaxe de la propriété css d'un contenu        
+    //     contentCode.innerHTML += `.` + child.name + ` { <br>`;
+    // //
+    //     for (property of child) {
+    //         if (property.value != null) {
+    //             contentCode.innerHTML += `
+    //             .
+    //             ` + property.name + `
+    //                 : 
+    //             ` + property.value + `
+    //             ; <br>`;
+    //         }
+    //     }
+    // // Fermeture de la propriété css d'un contenu
+    //     contentCode.innerHTML += `} <br><br>`;
+
+}
