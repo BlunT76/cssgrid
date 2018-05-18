@@ -6,15 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CSS Grid vs Flex-Box</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <script type="text/javascript" src="script.js"></script>
 </head>
-    
+
 <body>
-  <a href="pagegrid.html">CSS Grid</a>
-    <a href="pageflex.html">CSS Flex-box</a>
-  <!-- Le reste du contenu -->
-  
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+    <img src="./images/logo.png" width="30" height="30" alt="">
+  </a>
+        <a class="navbar-brand" href="#">CSS Grid</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pagegrid.html">CSS Grid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pageflex.html">Flex-Box</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+      <!--Navbar text with an inline element-->
+    </span>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm text-light">
+                <h1 class="text-center">grid</h1>
+            </div>
+            <div class="col-sm text-light">
+                <h1 class="text-center">flex</h1>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Le reste du contenu -->
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="scriptGrid.js"></script>
+    <script href="generate-css.js"></script>
 </body>
 </html>
