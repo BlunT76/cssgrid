@@ -43,19 +43,19 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="d-flex align-items-center justify-content-center">
-                    <div class="buttonsdivs mt-2">
-                        <button class="divs btn btn-primary" value="add">+</button>
-                        <span class="font-weight-bold text-light ml-0 mr-3">Add divs</span>
-                        <button class="divs btn bg-danger text-light" value="remove">-</button>
-                    </div>
+                <li class="d-flex align-items-center justify-content-center m-2">
+                    <button class="divs btn btn-primary" value="add">+</button>
+                    <span class="font-weight-bold text-light ml-0 mr-3">Add divs</span>
+                    
+                    <button class="divs btn bg-danger text-light" value="remove">-</button>
                 </li>
-                <hr class="bg-dark">
+                <hr class="bg-dark mt-1">
                 <li class="d-flex align-items-center justify-content-between m-2">
                     <!--flex-direction: [row | column | row-reverse | column-reverse]-->
                     <select id="display" class="custom-select">
                         <option value="block">display:block</option> 
                         <option value="flex">display:flex</option>
+                        <option value="inline-flex">display:inline-flex</option>
                     </select>
                 </li>
                 <li class="d-flex align-items-center justify-content-between m-2">
@@ -117,7 +117,7 @@
         <a href="#menu-toggle" class="btn btn-black btn-sm text-bold" id="menu-toggle">></a>
         <div id="page-content-wrapper">
             
-            <div id="container" class="container-fluid">
+            <div id="container" class="container">
                 <!--Here comes the css grid divs created with Jquery-->
             </div>
 
