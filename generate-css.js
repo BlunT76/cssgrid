@@ -1,7 +1,6 @@
 
 function modal(formatedCode) {
 
-
     //CODE DE RECUPERATION DES PROPRIETES
     var container = document.getElementById("container");
     //Pour le parent ( un "for" de moins )
@@ -9,9 +8,9 @@ function modal(formatedCode) {
 
     // }
     //Pour les enfants
-    for (childNodes of container.childNodes) {
+    // for (childNodes of container.childNodes) {
 
-    }
+    // }
 
     // CODE DE FORMATAGE ET D'INSTANCIATION DES PROPRIETES
 
@@ -30,7 +29,6 @@ function modal(formatedCode) {
     //On commence par instancier les propriétés du conteneur
     // Début de synthaxe de la propriété css conteneur
     containerCode.innerHTML += `.container { <br>`; 
-    console.log(containerCSS);
     // 
     for (property of containerCSS) {
         if (property.value != null) {
@@ -48,24 +46,25 @@ function modal(formatedCode) {
 
     //On passe aux div contenues dans le conteneur
     // A remplacer par un for of 
-    for (child of containerCSS.children) {
-    // Début de synthaxe de la propriété css d'un contenu        
-        contentCode.innerHTML += `.` + child.name + ` { <br>`;
-    //
-        for (property of child) {
-            if (property.value != null) {
-                contentCode.innerHTML += `
-                .
-                ` + property.name + `
-                    : 
-                ` + property.value + `
-                ; <br>`;
-            }
-        }
-    // Fermeture de la propriété css d'un contenu
-        contentCode.innerHTML += `} <br><br>`;
+    // for (child of containerCSS.children) {
+    // // Début de synthaxe de la propriété css d'un contenu        
+    //     contentCode.innerHTML += `.` + child.name + ` { <br>`;
+    // //
+    //     for (property of child) {
+    //         if (property.value != null) {
+    //             contentCode.innerHTML += `
+    //             .
+    //             ` + property.name + `
+    //                 : 
+    //             ` + property.value + `
+    //             ; <br>`;
+    //         }
+    //     }
+    // // Fermeture de la propriété css d'un contenu
+    //     contentCode.innerHTML += `} <br><br>`;
     }
 }
+
 
 
 // Ceci est un objet qui contiendra toutes les valeurs des propriétés css, ainsi que leurs noms sous forme de string ( pour une facilité d'affichage des noms )
@@ -78,18 +77,19 @@ var containerCSS = {
     // FLEX : Sur les containers
     flex_direction : { name : "flex-direction", value : null},
     flex_wrap : { name : "flex-wrap", value : null},
-    align_items : { name : "align-items", value : null},
+    // align_items : { name : "align-items", value : null},
     align_content : { name : "align-content", value : null},
     flex_grow : { name : "flex-grow", value : null},
     align_self : { name : "align-self", value : null},
     order : { name : "order", value : null},
     // GRID : Sur les containers
     grid_template : { name : "grid-template", value : null},
-    grid_template_areas : { name : "grid-template-areas", value : null},
     grid_template_rows : { name : "grid-template-rows", value : null},
     grid_template_columns : { name : "grid-template-column", value : null},
-    grid_gap : { name : "grid-gap", value : null},
-    grid_auto_rows : { name : "grid-auto-rows", value : null},
+    grid_column_gap : { name : "grid-column-gap", value : null},
+    grid_row_gap : { name : "grid-row-gap", value : null},
+    justify_items : { name : "justify-items", value : null},
+    align_items : { name : "align-items", value : null},
 
     children : [] /* Contient des objets "contentCSS" */
 }
@@ -100,7 +100,8 @@ var containerCSS = {
 // (et ce serait pénible d'itérer un grand nombre d'objets qui suivraient du coup le meme chéma que le "containerCSS".)
 class contentCSS {
 
-    constructor (align_self_value, flex_grow_value, order_value, grid_row_value, grid_column_value) {
+    constructor (divName, align_self_value, flex_grow_value, order_value, grid_row_value, grid_column_value) {
+        this.divName = divName
 // FLEX : sur les contenus
         this.align_self = { name : "align-self", value : align_self_value };
         this.flex_grow = { name : "flex-grox", value : flex_grow_value };
