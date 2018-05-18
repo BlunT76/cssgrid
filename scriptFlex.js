@@ -10,9 +10,9 @@ $(document).ready(function () {
             
             $(".container").append(`<div id="divjq${divcount}" class="border border-light divjq">
                                         <h3>${divcount}</h3>
-                                        <span>order</span>
-                                        <input class="orderdiv input-group-text" type="number" value="0"><p></p>
-                                        <span>flex-grow</span>
+                                        <span>order</span><br/>
+                                        <input class="orderdiv input-group-text" type="number" value="0"><br/>
+                                        <span>flex-grow</span><br/>
                                         <input class="flexgrow input-group-text" type="number" value="0"><p></p>
                                         <select id="align-self" class="custom-select">
                                             <option value="flex-start">align-self:flex-start</option>
