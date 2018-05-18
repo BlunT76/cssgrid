@@ -8,10 +8,8 @@
     align-items: stretch;
  }*/
 
-
+$("#wrapper").toggleClass("toggled");
 $(document).ready(function () {
-    //e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
     var divcount = 0;
     var gtc = "";
     var gtr = "";
@@ -91,7 +89,7 @@ $(document).ready(function () {
         var selection = $(this).attr("value");
         if (selection === "add") {
             divcount++;
-            $("#container").append('<div id="divjq' + divcount + '" class="border border-light divjq"><h3>' + divcount + '</h3><p>grid-column-start</p><input class="colstart" type="number" value="0" ><p>grid-column-end</p><input class="colend" type="number" value="0" ><p>grid-row-start</p><input class="rowstart" type="number" value="0" ><p>grid-row-end</p><input class="rowend" type="number" value="0" ></div>');
+            $("#container").append('<div id="divjq' + divcount + '" class="border border-light divjq"><h3>' + divcount + '</h3><p>grid-column-start</p><input class="colstart input-group-text" type="number" value="0" ><p>grid-column-end</p><input class="colend input-group-text" type="number" value="0" ><p>grid-row-start</p><input class="rowstart input-group-text" type="number" value="0" ><p>grid-row-end</p><input class="rowend input-group-text" type="number" value="0" ></div>');
 
         } else {
             if (divcount > 0) {
