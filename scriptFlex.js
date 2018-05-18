@@ -1,20 +1,21 @@
+$("#wrapper").toggleClass("toggled");
+
 $(document).ready(function () {
-    $("#wrapper").toggleClass("toggled");
     var divcount = 0;
     setFlexAttr();
     $(".divs").click(function () {
-
         var selection = $(this).attr("value");
         if (selection === "add") {
             divcount++;
             
             $(".container").append(`<div id="divjq${divcount}" class="border border-light divjq">
                                         <h3>${divcount}</h3>
-                                        <span>order</span>
-                                        <input class="orderdiv input-group-text" type="number" value="0"><p></p>
-                                        <span>flex-grow</span>
+                                        <span>order</span><br/>
+                                        <input class="orderdiv input-group-text" type="number" value="0"><br/>
+                                        <span>flex-grow</span><br/>
                                         <input class="flexgrow input-group-text" type="number" value="0"><p></p>
                                         <select id="align-self" class="custom-select">
+                                            <option disabled selected value> -- align-self -- </option>
                                             <option value="flex-start">align-self:flex-start</option>
                                             <option value="flex-end">align-self:flex-end</option>
                                             <option value="center">align-self:center</option>
@@ -25,7 +26,6 @@ $(document).ready(function () {
 
         } else {
             if (divcount > 0) {
-                $("#gridstart" + divcount).remove();
                 $("#divjq" + divcount).remove();
                 divcount--;
             }

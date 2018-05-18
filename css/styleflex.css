@@ -36,9 +36,9 @@ body {
 }
 
 #container {
-    width:800px;
+    width:900px;
     height:550px;
-    border: solid 2px;
+    border: solid 2px #050505;
     color: #EEEEEE;
     font-size: 1em;
     border-radius: 5px;
