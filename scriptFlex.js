@@ -64,4 +64,18 @@ $(document).ready(function () {
         console.log(asAttr + ":" + asVal);
         $(this).parent().css(asAttr, asVal);
     }
+
+    $("#gencss")
+    .click(function () {
+
+        containerCSS.display.value = $("#container").css("display");
+
+        containerCSS.flex_direction.value = $("#flex-direction").val();
+        containerCSS.justify_content.value = $("#justify-content").val();
+        containerCSS.flex_wrap.value = $("#flex-wrap").val();
+        containerCSS.align_items.value = $("#align-items").val();
+        containerCSS.align_content.value = $("#align-content").val();
+        
+        modal();
+    });
 });

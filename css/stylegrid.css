@@ -62,8 +62,8 @@ input {
 }
 
 img {
-    width:50px;
-    height:auto;
+    /width:50px;
+    /height:auto;
     margin-right: 20px;
     /margin-top: auto;
     /padding-bottom: 10px;
@@ -95,5 +95,5 @@ img {
 
 
 #code-inside {
-    background-color: ;
+    
 }

@@ -12,11 +12,13 @@ var containerCSS = {
     // FLEX : Sur les containers
     flex_direction : { name : "flex-direction", value : null},
     flex_wrap : { name : "flex-wrap", value : null},
-    // align_items : { name : "align-items", value : null},
+    justify_content : { name : "justify-content", value : null},
     align_content : { name : "align-content", value : null},
-    flex_grow : { name : "flex-grow", value : null},
-    align_self : { name : "align-self", value : null},
-    order : { name : "order", value : null},
+    ///////////////////////////////////
+    // flex_grow : { name : "flex-grow", value : null},
+    // align_self : { name : "align-self", value : null},
+    // order : { name : "order", value : null},
+    
     // GRID : Sur les containers
     grid_template : { name : "grid-template", value : null},
     grid_template_rows : { name : "grid-template-rows", value : null},
