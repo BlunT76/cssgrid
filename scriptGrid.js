@@ -53,7 +53,7 @@ $(document).ready(function () {
     $("#ColumnGap")
         .change(function () {
             var selection = $("#ColumnGap").val();
-            console.log(selection)
+            console.log(selection);
             $("#container").css("grid-column-gap", selection + "px");
             //console.log(selection);
         });
@@ -62,7 +62,7 @@ $(document).ready(function () {
     $("#RowGap")
         .change(function () {
             var selection = $("#RowGap").val();
-            console.log(selection)
+            console.log(selection);
             $("#container").css("grid-row-gap", selection + "px");
             //console.log(selection);
         });
@@ -71,7 +71,7 @@ $(document).ready(function () {
     $("#justify")
         .change(function () {
             var selection = $("#justify option:selected").val();
-            console.log(selection)
+            console.log(selection);
             $("#container").css("justify-items", selection);
             //console.log(selection);
         });
@@ -80,7 +80,7 @@ $(document).ready(function () {
     $("#align")
         .change(function () {
             var selection = $("#align option:selected").val();
-            console.log(selection)
+            console.log(selection);
             $("#container").css("align-items", selection);
             //console.log(selection);
         });
