@@ -3,6 +3,10 @@ body {
     background: #313234;
 }
 
+.navbar {
+    font-size: 0.8em;
+}
+
 .language-css{
     background: #F8F9FA;
     border-radius: 2px;
