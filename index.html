@@ -375,6 +375,7 @@ aside {
                         <img class="img-fluid" alt="Grid 05" src="https://www.alsacreations.com/xmedia/doc/original/grid-05.png"></p>
                     <p>
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/rOJJjK">Démonstration</a></p>
+
                     <hr class="bg-light mb-5">
                     <h3 class="text-info">Occuper plusieurs emplacements</h3>
                     <p>Tels les célèbres attributs <code class="language-html">rowspan</code> et <code class="language-html">colspan</code> dédiés aux tableaux HTML, le module Grid Layout introduit la possibilité à un élément de s'étaler sur plusieurs emplacements, à la fois horizontalement et verticalement.</p>
@@ -520,23 +521,225 @@ footer {
                 
                 
             </div>
-            <!--CSS Grid end-->
+
             <div class="col-lg-6 p-5 text-light">
+                <h1 class="text-center">Flexbox</h1>
+                <p>Le principe de la mise en page avec Flexbox est simple : vous définissez un conteneur, et à l'intérieur vous placez plusieurs éléments. Imaginez un carton dans lequel vous rangez plusieurs objets : c'est le principe !</p>
+                <hr class="bg-light">
+                <h3 class="text-center">Un conteneur, des éléments</h3>
+                <p>Sur une même page web, vous pouvez sans problème avoir plusieurs conteneurs. Ce sera à vous d'en créer autant que nécessaire pour obtenir la mise en page que vous voulez.</p>
+                <p>Commençons par étudier le fonctionnement d'un conteneur.</p>
+                <p><img class="img-fluid" alt="Flex1" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flexbox_conteneur.png"></p>
+                <p>Le conteneur est une balise HTML, et les éléments sont d'autres balises HTML à l'intérieur :</p>
+                <pre class="code-html language-css"><code class="language-html">&lt;div id="conteneur"&gt;
+    &lt;div class="element"&gt;Elément 1&lt;/div&gt;
+    &lt;div class="element"&gt;Elément 2&lt;/div&gt;
+    &lt;div class="element"&gt;Elément 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <p>Par défaut, les blocs se placent les uns en-dessous des autres:</p>
+                <p><img class="img-fluid" alt="Flex2" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/position_defaut.png"></p>
+                <hr class="bg-light">
+                <h3 class="text-center">Les Flexbox</h3>
+                <p>Pour utiliser les flexbox, il suffit d'ajouter à la propriété <strong><code class="language-css">display:flex;</code></strong> au CSS de votre conteneur:</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+}</code></pre>
+                <p>Alors les blocs se placent par défaut côte à côte!</p>
+                <p><img class="img-fluid" alt="Flex2" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex_defaut.png"></p>
+                <h4>La direction</h4>
+                <p>Flexbox nous permet d'agencer ces éléments dans le sens que l'on veut. Avec <strong><code class="language-css">flex-direction</code></strong> , on peut les positionner verticalement ou encore les inverser. Il peut prendre les valeurs suivantes :</p>
+                <ul>
+                    <li>row : organisés sur une ligne (par défaut)</li>
+                    <li>column : organisés sur une colonne</li>
+                    <li>row-reverse : organisés sur une ligne, mais en ordre inversé</li>
+                    <li>column-reverse : organisés sur une colonne, mais en ordre inversé</li>
+                </ul>
+                <p>Exemple :</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+    flex-direction: column;
+}</code></pre>
+                <p><img class="img-fluid" alt="FlexCol" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex_direction_column.png"></p>
+                <p>On peut tester l'ordre inversé:</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+    flex-direction: column-reverse;
+}</code></pre>
+                <p><img class="img-fluid" alt="FlexColRev" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex_direction_column_reverse.png"></p>
+                <p>les blocs sont maintenant dans l'ordre inverse ! Sans avoir changé le code HTML qui reste le même depuis le début.</p>
+                <h4>Le retour à la ligne</h4>
+                <p>Par défaut, les blocs essaient de rester sur la même ligne s'ils n'ont pas la place (ce qui peut provoquer des bugs de design parfois). Si vous voulez, vous pouvez demander à ce que les blocs aillent à la ligne lorsqu'ils n'ont plus la place avec <strong><code class="language-css">flex-wrap</code></strong> qui peut prendre ces valeurs :</p>
+                <ul>
+                    <li>nowrap : pas de retour à la ligne (par défaut)</li>
+                    <li>wrap : les éléments vont à la ligne lorsqu'il n'y a plus la place</li>
+                    <li>wrap-reverse : les éléments vont à la ligne lorsqu'il n'y a plus la place en sens inverse</li>
+                </ul>
+                <p>Exemple :</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+    flex-wrap: wrap;
+}</code></pre>
+                <p>Voici l'effet que prennent les différentes valeurs sur une même illustration :</p>
+                <p><img class="img-fluid" alt="FlexWrap" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex_wrap.png"></p>
+                <hr class="bg-light">
+                <h3 class="text-center">Les Alignements</h3>
+                <p>Les éléments sont organisés soit horizontalement (par défaut), soit verticalement. Cela définit ce qu'on appelle l'axe principal. Il y a aussi un axe secondaire (cross axis) :</p>
+                <ul>
+                    <li>Si vos éléments sont organisés horizontalement, l'axe secondaire est l'axe vertical.</li>
+                    <li>Si vos éléments sont organisés verticalement, l'axe secondaire est l'axe horizontal.</li>
+                </ul>
+                <p>Nous allons découvrir comment aligner nos éléments sur l'axe principal et sur l'axe secondaire.</p>
+                <h4 class="text-center">Aligner sur l'axe principal</h4>
+                <p>Pour faire simple, partons sur des éléments organisés horizontalement (c'est le cas par défaut). Pour changer leur alignement, on va utiliser <strong><code class="language-css">justify-content</code></strong>, qui peut prendre ces valeurs :</p>
+                <ul>
+                    <li>flex-start : alignés au début (par défaut)</li>
+                    <li>flex-end : alignés à la fin</li>
+                    <li>center : alignés au centre</li>
+                    <li>space-between : les éléments sont étirés sur tout l'axe (il y a de l'espace entre eux)</li>
+                    <li>space-around : idem, les éléments sont étirés sur tout l'axe, mais ils laissent aussi de l'espace sur les extrémités</li>
+                </ul>
+                <p>Par exemple :</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+    justify-content: space-around;
+}</code></pre>
+                <p>Voici une image présentant toutes les valeurs possibles pour voir ce que ça donne:</p>
+                <p><img class="img-fluid" alt="FlexJust" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/justify_content.png"></p>
+                <p>Avec une simple propriété, on peut intelligemment agencer nos éléments comme on veut</p>
+                <p>Ca marche aussi si vos éléments sont dans une direction verticale. Dans ce cas, l'axe vertical devient l'axe principal, et <strong><code class="language-css">justify-content</code></strong> s'applique aussi </p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 350px; /* Un peu de hauteur pour que les éléments aient la place de bouger */
+}</code></pre>
+                <p><img class="img-fluid" alt="FlexJustCol" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/vertical_center.png"></p>
+                   
+                <h4 class="text-center">Aligner sur l'axe secondaire</h4>
+                <p>Si nos éléments sont placés dans une direction horizontale (ligne), l'axe secondaire est... vertical. Et inversement, si nos éléments sont dans une direction verticale (colonne), l'axe secondaire est horizontal. Avec <strong><code class="language-css">align-items</code></strong>, nous pouvons changer leur alignement sur l'axe secondaire. Il peut prendre ces valeurs :</p>
+                <ul>
+                    <li>stretch : les éléments sont étirés sur tout l'axe (valeur par défaut)</li>
+                    <li>flex-start : alignés au début</li>
+                    <li>flex-end : alignés à la fin</li>
+                    <li>center : alignés au centre</li>
+                    <li>baseline : alignés sur la ligne de base (semblable à flex-start)</li>
+                </ul>
+                <p>Pour ces exemples, nous allons partir du principe que nos éléments sont dans une direction horizontale</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></pre>
+                <p>Un alignement sur l'axe secondaire avec align-items nous permet de centrer complètement l'élément dans le conteneur !</p>
+                <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/center_center.png"></p>
+                <h4 class="text-center">Aligner un seul élément</h4>
+                <p>Il est possible de faire une exception pour un seul des éléments sur l'axe secondaire avec<strong><code class="language-css">align-self</code></strong>:</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
-                <h1 class="text-center">flex</h1>
+.element:nth-child(2) /*On prend le deuxième bloc élément*/
+{
+    background-color: blue;
+    align-self: flex-end; /*Seul ce bloc sera aligné à la fin*/
+}
 
-
-                <h1 class="text-center">FLEXBOX</h1>
-                <h3></h3>
-                <p></p>
-                <p></p>
-
-
+/* ... */</code></pre>
+                <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/align_self.png"></p>
+                <hr class="bg-light">
+                <h3 class="text-center">Répartir plusieurs lignes</h3>
+                <p>Si vous avez plusieurs lignes dans votre Flexbox, vous pouvez choisir comment celles-ci seront réparties avec <strong><code class="language-css">align-content</code></strong>. Cette propriété n'a aucun effet s'il n'y a qu'une seule ligne dans la Flexbox. Prenons donc un cas de figure où nous avons plusieurs lignes. Je vais rajouter des éléments :</p>
+                <pre class="code-html language-css"><code class="language-html">&lt;div id="conteneur"&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <p>J'autorise mes éléments à aller à la ligne avec <strong><code class="language-css">flex-wrap</code></strong> :</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+    flex-wrap: wrap;
+}</code></pre>
+                <p>On obtient plusieurs lignes dans une flexbox:</p>
+                <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/multilignes.png"></p>
+                <p>Rien de vraiment nouveau. Voyons voir comment les lignes se répartissent différemment avec la nouvelle propriété <strong><code class="language-css">align-content</code></strong>. Elle peut prendre ces valeurs :</p>
+                <ul>
+                    <li>flex-start : les éléments sont placés au début</li>
+                    <li>flex-end : les éléments sont placés à la fin</li>
+                    <li>center : les éléments sont placés au centre</li>
+                    <li>space-between : les éléments sont séparés avec de l'espace entre eux</li>
+                    <li>space-around : idem, mais il y a aussi de l'espace au début et à la fin</li>
+                    <li>stretch (par défaut) : les éléments s'étirent pour occuper tout l'espace</li>
+                </ul>
+                <p>Voici ce que donnent les différentes valeurs :</p>
+                <p><img class="img-fluid" alt="FlexAlignC" src="images/align-content1.png"></p>
+                <p><img class="img-fluid" alt="FlexAlignC" src="images/align-content2.png"></p>
+                <hr class="bg-light">
+                <h3 class="text-center">Ordonner les éléments</h3>
+                <p>Sans changer le code HTML, nous pouvons modifier l'ordre des éléments en CSS grâce à la propriété <strong><code class="language-css">order</code></strong>. Indiquez simplement un nombre, et les éléments seront triés du plus petit au plus grand nombre. Reprenons une simple ligne de 3 éléments :</p>
+                <pre class="code-css language-css"><code class="language-css">#conteneur
+{
+    display: flex;
+}</code></pre>
+                <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex_defaut.png"></p>
+                <p>Si je dis que le premier élément sera placé en 3e position, le second en 1ère position et le troisième en 2nde position, l'ordre à l'écran change !</p>
+                <pre class="code-css language-css"><code class="language-css">.element:nth-child(1)
+{
+    order: 3;
+}
+.element:nth-child(2)
+{
+    order: 1;
+}
+.element:nth-child(3)
+{
+    order: 2;
+}</code></pre>
+                <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/order.png"></p>
+                <hr class="bg-light">
+                <h3 class="text-center">Faire grossir ou maigrir les éléments</h3>
+                <p>Avec la propriété  <strong><code class="language-css">flex</code></strong>, nous pouvons permettre à un élément de grossir pour occuper tout l'espace restant.</p>
+                <pre class="code-css language-css"><code class="language-css">.element:nth-child(2)
+{
+    flex: 1;
+}</code></pre>
+                <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex1.png"></p>
+                <p>Le nombre que vous indiquez à la propriété flex indique dans quelle mesure il peut grossir par rapport aux autres.</p>
+                <pre class="code-css language-css"><code class="language-css">.element:nth-child(1)
+{
+    flex: 2;
+}
+.element:nth-child(2)
+{
+    flex: 1;
+}</code></pre>
+                <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex2.png"></p>
+                
+                
             </div>
-
         </div>
     </div>
-
+                
     <!-- Le reste du contenu -->
 
 
