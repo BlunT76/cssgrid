@@ -10,8 +10,8 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png"href="images/logo.png">
-    
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+
 </head>
 
 <body>
@@ -45,14 +45,18 @@
         <div class="row">
             <div class="col-lg-6 p-5 text-light">
                 <h1 class="text-center">CSS Grid</h1>
+                <a href="https://www.alsacreations.com/article/lire/1388-css3-grid-layout.html">
+                    <p class="text-center">Cet article est issu de CCS3 Grid Layout par Alsa Creations</p>
+                </a>
+                <h2 class="text-left text-warning">La theorie:</h2>
                 <p>
                     Le module de positionnement <a href="http://www.w3.org/TR/css-grid-1/"><strong>"Grid Layout"</strong></a> est une spécification du W3C à l'état de Candidate Recommandation dont les premiers jets datent de 2004.</p>
                 <p>
                     Sa documentation officielle est actuellement maintenue par trois contributeurs, dont une personne de Microsoft et une personne de Google.</p>
                 <p class="info">
-                    <hr class="bg-light">
+                    <hr class="bg-light mb-5">
 
-                    <h3>CSS Grid permet d'aligner des éléments sous forme de colonnes et de lignes.</h3>
+                    <h3 class="text-info">CSS Grid permet d'aligner des éléments sous forme de colonnes et de lignes.</h3>
                     <p>On crée un "contexte de grille" tout simplement en appliquant la déclaration <strong><code class="language-css">display: grid</code></strong> à un élément conteneur qui constituera la trame générale, il deviendra un "grid-container" et ses enfants directs des "grid-items". Cette trame sera définie par un schéma virtuel formé de lignes et colonnes définissant des "cellules".</p>
                     <p>Tous les enfants (directs) de ce conteneur général seront automatiquement affectés par ce contexte particulier et pourront se placer au sein des "cellules" de la trame.</p>
 
@@ -109,8 +113,8 @@
                             </tr>
                         </tbody>
                     </table>
-                <hr class="bg-light">
-                    <h3>Mise en oeuvre</h3>
+                    <hr class="bg-light mb-5">
+                    <h3 class="text-info">Mise en oeuvre</h3>
                     <p>On crée un "contexte de grille" tout simplement en appliquant la déclaration <strong><code class="language-css">display: grid</code></strong> à un élément conteneur qui constituera la trame générale, il deviendra un "grid-container" et ses enfants directs des "grid-items". Cette trame sera définie par un schéma virtuel formé de lignes et colonnes définissant des "cellules".</p>
                     <p>Tous les enfants (directs) de ce conteneur général seront automatiquement affectés par ce contexte particulier et pourront se placer au sein des "cellules" de la trame.</p>
                     <h4>Exemple 1 (affichage de deux blocs sur une ligne) :</h4>
@@ -167,8 +171,8 @@ aside {
                         <img class="img-fluid" alt="Grid 02" src="https://www.alsacreations.com/xmedia/doc/original/grid-02.png"></p>
                     <p>
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/dYddPr">Démonstration</a></p>
-                <hr class="bg-light">
-                    <h3>
+                    <hr class="bg-light mb-5">
+                    <h3 class="text-info">
                         Variante : la syntaxe de templates</h3>
                     <p>
                         Grid Layout autorise la visualisation sous forme de canevas, en nommant explicitement les emplacements de la grille à l'aide de chaînes de caractères ou de simples lettres.</p>
@@ -188,8 +192,8 @@ nav {
                         <img class="img-fluid" alt="Grid 03" src="https://www.alsacreations.com/xmedia/doc/original/grid-03.png"></p>
                     <p>
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/WQMMQo">Démonstration</a></p>
-                <hr class="bg-light">
-                    <h3>
+                    <hr class="bg-light mb-5">
+                    <h3 class="text-info">
                         Les unités de largeur et hauteur</h3>
                     <p>
                         Le modèle d'affichage en grille ne se contente pas d'employer les unités de largeur et hauteur habituelles; il introduit des fonctions complexes permettant de s'adapter à des contextes de contenus différents :</p>
@@ -269,8 +273,8 @@ aside {
                         <img class="img-fluid" alt="Grid 04" src="https://www.alsacreations.com/xmedia/doc/original/grid-04.png"></p>
                     <p class="center" style="text-align: left;">
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/LpQQRa">Démonstration</a></p>
-                <hr class="bg-light">
-                    <h3>
+                    <hr class="bg-light mb-5">
+                    <h3 class="text-info">
                         Centrer les éléments</h3>
                     <p>
                         Par défaut, les éléments "grid-items" s'étirent pour occuper tout l'espace de leur cellule.</p>
@@ -376,8 +380,8 @@ aside {
                         <img class="img-fluid" alt="Grid 05" src="https://www.alsacreations.com/xmedia/doc/original/grid-05.png"></p>
                     <p>
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/rOJJjK">Démonstration</a></p>
-                <hr class="bg-light">
-                    <h3>
+                    <hr class="bg-light mb-5">
+                    <h3 class="text-info">
                         Occuper plusieurs emplacements</h3>
                     <p>
                         Tels les célèbres attributs <code class="language-html">rowspan</code> et <code class="language-html">colspan</code> dédiés aux tableaux HTML, le module Grid Layout introduit la possibilité à un élément de s'étaler sur plusieurs emplacements, à la fois horizontalement et verticalement.</p>
@@ -411,8 +415,8 @@ footer {
                         <img class="img-fluid" alt="Grid 06" src="https://www.alsacreations.com/xmedia/doc/original/grid-06.png"></p>
                     <p>
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/epVVGK">Démonstration</a></p>
-                <hr class="bg-light">
-                    <h3>
+                    <hr class="bg-light mb-5">
+                    <h3 class="text-info">
                         Les motifs de répétition</h3>
                     <p>
                         Une fonctionnalité particulièrement intéressante du positionnement sous forme de grilles est de pouvoir appliquer des motifs de répétition de colonnes ou de lignes (appelés "patterns").</p>
@@ -444,8 +448,8 @@ footer {
                         <img class="img-fluid" alt="Grid 07" src="https://www.alsacreations.com/xmedia/doc/original/grid-07.png"></p>
                     <p>
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/JYppMV">Démonstration</a></p>
-                <hr class="bg-light">
-                    <h3>
+                    <hr class="bg-light mb-5">
+                    <h3 class="text-info">
                         Répartition automatique</h3>
                     <p>
                         Au sein de leur grid-container, les éléments grid-items se répartissent automatiquement par défaut. C'est à dire que si aucune place ne leur est assignée, ils se disposent dans le premier emplacement disponible au sein de la grille, dans le sens horizontal.</p>
@@ -469,8 +473,8 @@ footer {
                         <img class="img-fluid" alt="Grid 08" src="https://www.alsacreations.com/xmedia/doc/original/grid-08.png"></p>
                     <p>
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/BoYYvZ">Démonstration</a></p>
-                <hr class="bg-light">
-                    <h3>
+                    <hr class="bg-light mb-5">
+                    <h3 class="text-info">
                         Vous avez dit "responsive" ?</h3>
                     <p>
                         Pour finir cette présentation du modèle de positionnement Grid Layout en apothéose, j'ai gardé le meilleur pour la fin.</p>
@@ -499,13 +503,32 @@ footer {
                         <img class="img-fluid" alt="Grid 09" src="https://www.alsacreations.com/xmedia/doc/original/grid-09.png"></p>
                     <p>
                         <a class="btn btn-success" href="https://codepen.io/raphaelgoetter/pen/epVVwx">Démonstration</a></p>
+                    <hr class="bg-light mb-5">
 
-                    <p></p>
+                    <h2 class="text-left text-warning">La pratique:</h2>
+                    <p>Rien de mieux que la pratique pour apprendre. Afin de tester les principales propriétés de css grid, nous avons coder une page qui permet de tester css grid en live </p>
+                    
+                    <img class="img-fluid" src="./images/grid_pads.png">
+                    <p class="text-center">ex: 4 div sur 2 lignes et 2 colonnes</p>
+                    
+                    <img class="img-fluid" src="./images/grid_layout.png">
+                    <p class="text-center">ex: 3 div en disposition header sidebar content</p>
+                    <hr class="bg-light mb-5">
+                
+                    <h3 class="text-info">Comment ca marche?</h3>
+                    <p class="text-light">Appuyez sur les boutons plus et moins pour ajouter ou enlever des div</p>
+                    <p class="text-light">Appuyez sur le sélecteur display et choisissez display: grid </p>
+                    <p class="text-light">Utilisez les flèches Haut et Bas sur les input pour modifier les valeurs</p>
+                    <img class="rounded mx-auto d-block" src="./images/touche.jpg">
+                    <p>
+                        <a class="btn btn-success" href="pagegrid.html">Tester CSS Grid</a></p>
+                    <hr class="bg-light mb-5">
             </div>
+            <!--CSS Grid end-->
             <div class="col-sm text-light">
 
                 <h1 class="text-center">flex</h1>
-                
+
 
                 <h1 class="text-center">FLEXBOX</h1>
                 <h3></h3>
