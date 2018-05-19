@@ -20,13 +20,13 @@
         <a class="navbar-brand" href="#">
     <img src="./images/logo.png" width="30" height="30" alt="">
   </a>
-        <a class="navbar-brand" href="#">CSS Grid</a>
+        <a class="navbar-brand" href="#">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item disabled">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -43,13 +43,72 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm text-light">
-                <h1 class="text-center">grid</h1>
+            <div class="col-sm text-light p-5">
+                <h1 class="text-center">CSS Grid</h1>
+                <h3>CSS Grid permet d'aligner des éléments sous forme de colonnes et de lignes.</h3>
+                <p>On crée un "contexte de grille" tout simplement en appliquant la déclaration <strong><code class="language-css">display: grid</code></strong> à un élément conteneur qui constituera la trame générale, il deviendra un "grid-container" et ses enfants directs des "grid-items". Cette trame sera définie par un schéma virtuel formé de lignes et colonnes définissant des "cellules".</p>
+                <p>Tous les enfants (directs) de ce conteneur général seront automatiquement affectés par ce contexte particulier et pourront se placer au sein des "cellules" de la trame.</p>
+
+                <h4>Les propriétés usuelles de Grid Layout</h4>
+                <table class="pagetable">
+                    <tbody>
+                        <tr>
+                            <th style="width:30%" class="bg-dark">
+                                Propriété</th>
+                            <th>
+                                Détails</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">grid</code>, <code class="language-css">inline-grid</code></td>
+                            <td>
+                                déclaration d'un contexte de grille (création d'un "grid-container")</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">grid-template-areas</code></td>
+                            <td>
+                                déclaration d'un "canevas" de cellules nommées (optionnel)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">grid-template-rows</code>, <code class="language-css">grid-template-columns</code></td>
+                            <td>
+                                déclaration des dimensions de lignes et colonnes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">grid-row</code>, <code class="language-css">grid-column</code></td>
+                            <td>
+                                placement d'un élément "grid-item" dans une ligne ou une colonne</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">grid-gap, grid-column-gap, grid-row-gap</code></td>
+                            <td>
+                                espaces inter-colonnes ou inter-rangées (gouttières)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">align-items, justify-items</code></td>
+                            <td>
+                                alignement horizontal ou vertical</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="language-css">align-self, justify-self</code></td>
+                            <td>
+                                alignement horizontal ou vertical d'éléments distincts</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p></p>
             </div>
             <div class="col-sm text-light">
                 <h1 class="text-center">flex</h1>
             </div>
-            
+
         </div>
     </div>
 
