@@ -32,7 +32,11 @@ body {
     
 }
 
-
+.flexpart{
+    border-left: 1px;
+    border-left-color: white;
+    border-left-style: groove;
+}
 
 
 
