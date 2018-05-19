@@ -508,7 +508,7 @@ footer {
                     <hr class="bg-light mb-5">
 
                     <h2 class="text-left text-warning">La pratique:</h2>
-                    <p>Rien de mieux que la pratique pour apprendre. Afin de tester les principales propriétés de css grid, nous avons coder une page qui permet de tester css grid en live </p>
+                    <p>Rien de mieux que la pratique pour apprendre. Afin de tester les principales propriétés de css grid, nous avons codé une page qui permet de tester css grid en live </p>
                     
                     <img class="img-fluid" src="./images/grid_pads.png">
                     <p class="text-center">ex: 4 div sur 2 lignes et 2 colonnes</p>
@@ -544,9 +544,13 @@ footer {
 
             <div class="col-lg-6 p-5 text-light">
                 <h1 class="text-center">Flexbox</h1>
+                <a href="https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/la-mise-en-page-avec-flexbox">
+                    <p class="text-center">Cet article est issu du cours Flexbox d'Openclassroom</p>
+                </a>
+                <h2 class="text-left text-warning">La theorie:</h2>
                 <p>Le principe de la mise en page avec Flexbox est simple : vous définissez un conteneur, et à l'intérieur vous placez plusieurs éléments. Imaginez un carton dans lequel vous rangez plusieurs objets : c'est le principe !</p>
-                <hr class="bg-light">
-                <h3 class="text-center">Un conteneur, des éléments</h3>
+                <hr class="bg-light mb-5">
+                <h3 class="text-info">Un conteneur, des éléments</h3>
                 <p>Sur une même page web, vous pouvez sans problème avoir plusieurs conteneurs. Ce sera à vous d'en créer autant que nécessaire pour obtenir la mise en page que vous voulez.</p>
                 <p>Commençons par étudier le fonctionnement d'un conteneur.</p>
                 <p><img class="img-fluid" alt="Flex1" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flexbox_conteneur.png"></p>
@@ -558,8 +562,8 @@ footer {
 &lt;/div&gt;</code></pre>
                 <p>Par défaut, les blocs se placent les uns en-dessous des autres:</p>
                 <p><img class="img-fluid" alt="Flex2" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/position_defaut.png"></p>
-                <hr class="bg-light">
-                <h3 class="text-center">Les Flexbox</h3>
+                <hr class="bg-light mb-5">
+                <h3 class="text-info">Les Flexbox</h3>
                 <p>Pour utiliser les flexbox, il suffit d'ajouter à la propriété <strong><code class="language-css">display:flex;</code></strong> au CSS de votre conteneur:</p>
                 <pre class="code-css language-css"><code class="language-css">#conteneur
 {
@@ -605,8 +609,8 @@ footer {
 }</code></pre>
                 <p>Voici l'effet que prennent les différentes valeurs sur une même illustration :</p>
                 <p><img class="img-fluid" alt="FlexWrap" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex_wrap.png"></p>
-                <hr class="bg-light">
-                <h3 class="text-center">Les Alignements</h3>
+                <hr class="bg-light mb-5">
+                <h3 class="text-info">Les Alignements</h3>
                 <p>Les éléments sont organisés soit horizontalement (par défaut), soit verticalement. Cela définit ce qu'on appelle l'axe principal. Il y a aussi un axe secondaire (cross axis) :</p>
                 <ul>
                     <li>Si vos éléments sont organisés horizontalement, l'axe secondaire est l'axe vertical.</li>
@@ -677,8 +681,8 @@ footer {
 
 /* ... */</code></pre>
                 <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/align_self.png"></p>
-                <hr class="bg-light">
-                <h3 class="text-center">Répartir plusieurs lignes</h3>
+                <hr class="bg-light mb-5">
+                <h3 class="text-info">Répartir plusieurs lignes</h3>
                 <p>Si vous avez plusieurs lignes dans votre Flexbox, vous pouvez choisir comment celles-ci seront réparties avec <strong><code class="language-css">align-content</code></strong>. Cette propriété n'a aucun effet s'il n'y a qu'une seule ligne dans la Flexbox. Prenons donc un cas de figure où nous avons plusieurs lignes. Je vais rajouter des éléments :</p>
                 <pre class="code-html language-css"><code class="language-html">&lt;div id="conteneur"&gt;
     &lt;div class="element"&gt;&lt;/div&gt;
@@ -714,8 +718,8 @@ footer {
                 <p>Voici ce que donnent les différentes valeurs :</p>
                 <p><img class="img-fluid" alt="FlexAlignC" src="images/align-content1.png"></p>
                 <p><img class="img-fluid" alt="FlexAlignC" src="images/align-content2.png"></p>
-                <hr class="bg-light">
-                <h3 class="text-center">Ordonner les éléments</h3>
+                <hr class="bg-light mb-5">
+                <h3 class="text-info">Ordonner les éléments</h3>
                 <p>Sans changer le code HTML, nous pouvons modifier l'ordre des éléments en CSS grâce à la propriété <strong><code class="language-css">order</code></strong>. Indiquez simplement un nombre, et les éléments seront triés du plus petit au plus grand nombre. Reprenons une simple ligne de 3 éléments :</p>
                 <pre class="code-css language-css"><code class="language-css">#conteneur
 {
@@ -736,8 +740,8 @@ footer {
     order: 2;
 }</code></pre>
                 <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/order.png"></p>
-                <hr class="bg-light">
-                <h3 class="text-center">Faire grossir ou maigrir les éléments</h3>
+                <hr class="bg-light mb-5">
+                <h3 class="text-info">Faire grossir ou maigrir les éléments</h3>
                 <p>Avec la propriété  <strong><code class="language-css">flex</code></strong>, nous pouvons permettre à un élément de grossir pour occuper tout l'espace restant.</p>
                 <pre class="code-css language-css"><code class="language-css">.element:nth-child(2)
 {
@@ -755,6 +759,18 @@ footer {
 }</code></pre>
                 <p><img class="img-fluid" alt="FlexAlignC" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/flex2.png"></p>
                 
+                <h2 class="text-left text-warning">La pratique:</h2>
+                <p>A l'image de CSS Grid, nous avons aussi codé une page qui permet de tester les différentes propriétés de flexbox, sur le conteneur et sur les éléments en live.</p>
+                <p><img class="img-fluid" alt="FlexAlignC" src="images/flex1.png"></p>
+                <p><img class="img-fluid" alt="FlexAlignC" src="images/flex2.png"></p>
+                <h3 class="text-info">Comment ca marche?</h3>
+                    <p class="text-light">Appuyez sur les boutons plus et moins pour ajouter ou enlever des div</p>
+                    <p class="text-light">Appuyez sur le sélecteur display et choisissez display: flex ou flex-inline </p>
+                    <p class="text-light">Utilisez les flèches Haut et Bas sur les input pour modifier les valeurs</p>
+                    <img class="rounded mx-auto d-block" src="./images/touche.jpg">
+                    <p>
+                        <a class="btn btn-success" href="pageflex.html">Tester Flexbox</a></p>
+                    <hr class="bg-light mb-5">
                 
             </div>
         </div>
