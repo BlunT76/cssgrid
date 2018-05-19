@@ -135,23 +135,14 @@ $(document).ready(function () {
         .click(function () {
 
             containerCSS.display.value = $("#container").css("display");
-            containerCSS.grid_template_columns.value = "grid-template-columns: " + cssgtc;
-            containerCSS.grid_template_rows.value = "grid-template-rows: " + cssgtr;
-            containerCSS.grid_column_gap.value = "grid-column-gap: " + $("#ColumnGap").val() + "px";
-            containerCSS.grid_row_gap.value = "grid-row-gap: " + $("#RowGap").val() + "px";
-            containerCSS.justify_items.value = "justify-items: " + $("#justify option:selected").val();
-            containerCSS.align_items.value = "align-items: " + $("#align option:selected").val();
+            containerCSS.grid_template_columns.value = cssgtc;
+            containerCSS.grid_template_rows.value = cssgtr;
+            containerCSS.grid_column_gap.value = $("#ColumnGap").val() + "px";
+            containerCSS.grid_row_gap.value = $("#RowGap").val() + "px";
+            containerCSS.justify_items.value = $("#justify option:selected").val();
+            containerCSS.align_items.value = $("#align option:selected").val();
             
-            console.log(containerCSS.display)
-            console.log(containerCSS.grid_template_columns);
-            console.log(containerCSS.grid_template_rows);
-            console.log(containerCSS.grid_column_gap);
-            console.log(containerCSS.grid_row_gap);
-            console.log(containerCSS.justify_items);
-            console.log(containerCSS.align_items);
-
-            //$("#container").css("align-items", selection);
-            //console.log(selection);
+            modal();
         });
 
 });
