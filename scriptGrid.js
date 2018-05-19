@@ -134,21 +134,21 @@ $(document).ready(function () {
     $("#gencss")
         .click(function () {
 
-            containerCSS.display = "display: " + $("#container").css("display");
-            containerCSS.grid_template_columns = "grid-template-columns: " + cssgtc;
-            containerCSS.grid_template_rows = "grid-template-rows: " + cssgtr;
-            containerCSS.grid_column_gap = "grid-column-gap: " + $("#ColumnGap").val() + "px";
-            containerCSS.grid_row_gap = "grid-row-gap: " + $("#RowGap").val() + "px";
-            containerCSS.jitems = "justify-items: " + $("#justify option:selected").val();
-            containerCSS.aitems = "align-items: " + $("#align option:selected").val();
+            containerCSS.display.value = $("#container").css("display");
+            containerCSS.grid_template_columns.value = "grid-template-columns: " + cssgtc;
+            containerCSS.grid_template_rows.value = "grid-template-rows: " + cssgtr;
+            containerCSS.grid_column_gap.value = "grid-column-gap: " + $("#ColumnGap").val() + "px";
+            containerCSS.grid_row_gap.value = "grid-row-gap: " + $("#RowGap").val() + "px";
+            containerCSS.justify_items.value = "justify-items: " + $("#justify option:selected").val();
+            containerCSS.align_items.value = "align-items: " + $("#align option:selected").val();
             
             console.log(containerCSS.display)
             console.log(containerCSS.grid_template_columns);
             console.log(containerCSS.grid_template_rows);
             console.log(containerCSS.grid_column_gap);
             console.log(containerCSS.grid_row_gap);
-            console.log(containerCSS.jitems);
-            console.log(containerCSS.aitems);
+            console.log(containerCSS.justify_items);
+            console.log(containerCSS.align_items);
 
             //$("#container").css("align-items", selection);
             //console.log(selection);
