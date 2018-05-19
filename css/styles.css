@@ -1,97 +1,44 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.8em;
-    /margin: auto 0;
-    /padding: 0px 50px;
-    /height:400px;
     background: #313234;
 }
 
-p{
-    margin-bottom:0px;
+.language-css{
+    background: #F8F9FA;
+    border-radius: 2px;
 }
 
-#commands {
-    /border: none;
-    /padding-top: 20px;
-    /padding-bottom: 20px;
-    /margin-bottom: 20px;
-    /color: #323232;
-    /border-radius: 0px;
+.code-css {
+    background: #F8F9FA;
+    border-left: solid 10px #018AB7;
+    border-right: solid 10px #018AB7;
+    border-radius: 10px;
 }
 
-.divjq {
-    border: solid 2px #F4F5F6;
-    color: #EEEEEE;
-    font-size: 1em;
-    text-align: center;
-    /padding-right:33%;
-    padding-bottom:15px;
-    border-radius: 5px;
+.language-html {
+    background: #F8F9FA;
+    border-radius: 2px;
 }
 
-#container {
-    width:100%;
-    /height:600px;
-    border: solid 2px #050505;
-    border-radius: 5px;
-    color: #EEEEEE;
-    padding: 3px;
-    line-height: 1em;
-}
-
-input {
-    max-width: 50px;
+.code-html {
+    background: #F8F9FA;
+    border-left: solid 10px #EE5D23;
+    border-right: solid 10px #EE5D23;
+    border-radius: 10px;
     
 }
 
-/.input-group-text {
-    
-    /padding: 7px;
-}
 
-.divs {
-    width:35px;
-}
 
-.input-group-text {
-    display: inline;
-    width: 280px;
-    font-size: 1em;
-    padding-right:0px;
-}
 
-img {
-    width:50px;
-    height:auto;
-    margin-right: 20px;
-    /margin-top: auto;
-    /padding-bottom: 10px;
-}
 
-.affix {
-    /top: 50px;
-    padding: 0px;
-    position: fixed;
-    background: #446433;
-    top: auto;
-    width: 100%;
-    z-index: 2;
-}
 
-.btn-black {
-    background-color: #050505;
-    border-radius: 0px 20px 20px 0px;
-}
 
-.h1 {
-    margin:0px;
-}
 
-#menu-toggle {
-    position: fixed;
-    z-index: 2;
-}
-/* CSS only for pageflex */
+
+
+
+
+
 
 

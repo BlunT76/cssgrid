@@ -84,9 +84,9 @@ function modal(formatedCode) {
     var gCode =  document.getElementById("generated-code");
     // Créé les deux paragraphe qui acceuilleront le css
     gCode.innerHTML = 
-    `<p id="container-code">
+    `<code id="container-code">
     /* Container's CSS */ <br>
-    </p>
+    </code>
     <p id="content-code">
     /* Contents' CSS */ <br>
     </p>`;
@@ -97,17 +97,20 @@ function modal(formatedCode) {
     // Début de synthaxe de la propriété css conteneur
     containerCode.innerHTML += `.container { <br>`; 
     // 
-    for (property of containerCSS) {
-        if (property.value != null) {
+    for (property in containerCSS) {
+        console.log("name of container's property : " + containerCSS[property].name);
+        console.log("value of container's property : " + containerCSS[property].value);
+
+        if (containerCSS[property].value != null) {
+
             containerCode.innerHTML += `
             .
-           ` + property.name + `
+           ` + containerCSS[property].name + `
              : 
-           ` + property.value + `
+           ` + containerCSS[property].value + `
            ; <br>`;
-        }
+         }
     }
-    console.log(containerCSS);
     // Fermeture de la propriété css conteneur
     containerCode.innerHTML += `} <br>`; 
 
