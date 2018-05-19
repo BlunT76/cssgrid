@@ -98,6 +98,9 @@ function modal(formatedCode) {
     containerCode.innerHTML += `.container { <br>`; 
     // 
     for (property in containerCSS) {
+        console.log("name of container's property : " + containerCSS[property].name);
+        console.log("value of container's property : " + containerCSS[property].value);
+
         if (containerCSS[property].value != null) {
 
             containerCode.innerHTML += `
@@ -108,7 +111,6 @@ function modal(formatedCode) {
            ; <br>`;
          }
     }
-    console.log(containerCSS);
     // Fermeture de la propriété css conteneur
     containerCode.innerHTML += `} <br>`; 
 
