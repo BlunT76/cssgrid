@@ -11,15 +11,6 @@ p{
     margin-bottom:0px;
 }
 
-#commands {
-    /border: none;
-    /padding-top: 20px;
-    /padding-bottom: 20px;
-    /margin-bottom: 20px;
-    /color: #323232;
-    /border-radius: 0px;
-}
-
 .divjq {
     border: solid 2px #F4F5F6;
     color: #EEEEEE;
@@ -63,24 +54,6 @@ input {
     padding-right:0px;
 }
 
-img {
-    /width:50px;
-    /height:auto;
-    margin-right: 20px;
-    /margin-top: auto;
-    /padding-bottom: 10px;
-}
-
-.affix {
-    /top: 50px;
-    padding: 0px;
-    position: fixed;
-    background: #446433;
-    top: auto;
-    width: 100%;
-    z-index: 2;
-}
-
 .btn-black {
     background-color: #050505;
     border-radius: 0px 20px 20px 0px;
@@ -94,11 +67,3 @@ img {
     position: fixed;
     z-index: 2;
 }
-
-
-#code-inside {
-    
-}
-
-
-
