@@ -18,7 +18,7 @@ var containerCSS = {
     // flex_grow : { name : "flex-grow", value : null},
     // align_self : { name : "align-self", value : null},
     // order : { name : "order", value : null},
-    
+
     // GRID : Sur les containers
     grid_template : { name : "grid-template", value : null},
     grid_template_rows : { name : "grid-template-rows", value : null},
@@ -37,15 +37,18 @@ var containerCSS = {
 // (et ce serait pénible d'itérer un grand nombre d'objets qui suivraient du coup le meme chéma que le "containerCSS".)
 class contentCSS {
 
-    constructor (divName, align_self_value, flex_grow_value, order_value, grid_row_value, grid_column_value) {
-        this.divName = divName
+    constructor (divID, divName, align_self_value, flex_grow_value, order_value, grid_row_start_value, grid_row_end_value, grid_column_start_value, grid_column_end_value) {
+        this.divName = divName;
+        this.divID = divID;
 // FLEX : sur les contenus
-        this.align_self = { name : "align-self", value : align_self_value };
-        this.flex_grow = { name : "flex-grox", value : flex_grow_value };
         this.order = { name : "order", value : order_value };
+        this.flex_grow = { name : "flex-grox", value : flex_grow_value };
+        this.align_self = { name : "align-self", value : align_self_value };
 // GRID : Sur les contenus
-        this.grid_row = { name : "grid-row", value : grid_row_value };
-        this.grid_column = { name : "grid-column", value : grid_column_value };
+        this.grid_row_start = { name : "grid-row-start", value : grid_row_start_value };
+        this.grid_row_end = { name : "grid-row-end", value : grid_row_end_value };
+        this.grid_column_start = { name : "grid-column-start", value : grid_column_start_value };
+        this.grid_column_end = { name : "grid-column-end", value : grid_column_end_value };
     }
 }
 
@@ -72,32 +75,28 @@ function modal(formatedCode) {
 
     //CODE DE RECUPERATION DES PROPRIETES
     var container = document.getElementById("container");
-    //Pour le parent ( un "for" de moins )
-    // for (property of ) {
-
-    // }
-    //Pour les enfants
-    // for (childNodes of container.childNodes) {
-
-    // }
 
     // CODE DE FORMATAGE ET D'INSTANCIATION DES PROPRIETES
 
-    var gCode =  document.getElementById("generated-code");
+    var gCode =  document.getElementById("code-inside");
     // Créé les deux paragraphe qui acceuilleront le css
     gCode.innerHTML = 
-    `<code id="container-code">
-    /* Container's CSS */ <br>
-    </code>
-    <p id="content-code">
-    /* Contents' CSS */ <br>
-    </p>`;
+    `<pre class="code-css language-css">
+        <code id="container-code" class="language-css">
+            /* Container's CSS */ <br>
+        </code>
+    </pre>
+    <pre class="code-css language-css">
+        <code id="content-code">
+           /* Contents' CSS */ <br>
+        </code>
+    </pre>`;
 
     var containerCode = document.getElementById("container-code");
     var contentCode = document.getElementById("content-code");
     //On commence par instancier les propriétés du conteneur
     // Début de synthaxe de la propriété css conteneur
-    containerCode.innerHTML += `.container { <br>`; 
+    containerCode.innerHTML += `.parent { <br>`; 
     // 
     for (property in containerCSS) {
         console.log("name of container's property : " + containerCSS[property].name);
@@ -105,12 +104,7 @@ function modal(formatedCode) {
 
         if (containerCSS[property].value != null) {
 
-            containerCode.innerHTML += `
-            .
-           ` + containerCSS[property].name + `
-             : 
-           ` + containerCSS[property].value + `
-           ; <br>`;
+            containerCode.innerHTML += `` + containerCSS[property].name + ` : ` + containerCSS[property].value + `; <br>`;
          }
     }
     // Fermeture de la propriété css conteneur
@@ -118,21 +112,29 @@ function modal(formatedCode) {
 
     //On passe aux div contenues dans le conteneur
     // A remplacer par un for of 
-    // for (child of containerCSS.children) {
-    // // Début de synthaxe de la propriété css d'un contenu        
-    //     contentCode.innerHTML += `.` + child.name + ` { <br>`;
-    // //
-    //     for (property of child) {
-    //         if (property.value != null) {
-    //             contentCode.innerHTML += `
-    //             .
-    //             ` + property.name + `
-    //                 : 
-    //             ` + property.value + `
-    //             ; <br>`;
-    //         }
-    //     }
-    // // Fermeture de la propriété css d'un contenu
-    //     contentCode.innerHTML += `} <br><br>`;
 
+    var containerMin = containerCSS.children;
+    for (child of containerMin) {
+    // Début de synthaxe de la propriété css d'un contenu     
+
+        contentCode.innerHTML += `.` + `child_` + child.divID + ` { <br>`;
+
+        for (property in child) {
+            if (child[property].value != null) {
+                contentCode.innerHTML += child[property].name + ` : ` + child[property].value + `; <br>`;
+            }
+        }
+    // Fermeture de la propriété css d'un contenu
+        contentCode.innerHTML += `} <br><br>`;
+
+    }
+}
+
+
+function copyToCLipBoard () {
+    
+    var copiedCode = document.getElementById("code-inside");
+    copiedCode.select();
+    document.execCommand("copy");
+    alert("Code copié: " + copiedCode.value);
 }

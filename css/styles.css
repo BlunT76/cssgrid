@@ -38,7 +38,25 @@ body {
     border-left-style: groove;
 }
 
+/*Footer CSS*/
+.footer-top { 
+    padding: 10px 0; 
+    background: #333; 
+    text-align: left; 
+    color: #aaa; 
+}
 
+.footer-about img.logo-footer { 
+    max-width: 35px; 
+    margin-top: 0; 
+    margin-bottom: 5px;
+}
+
+.footer-contact { 
+    word-wrap: break-word; 
+    border-left-style: groove;
+    border-left-color: white;
+}
 
 
 

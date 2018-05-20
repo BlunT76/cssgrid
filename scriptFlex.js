@@ -1,7 +1,8 @@
 $("#wrapper").toggleClass("toggled");
 
+var divcount = 0;
+
 $(document).ready(function () {
-    var divcount = 0;
     setFlexAttr();
     $(".divs").click(function () {
         var selection = $(this).attr("value");
@@ -14,13 +15,12 @@ $(document).ready(function () {
                                         <input class="orderdiv input-group-text" type="number" value="0"><br/>
                                         <span>flex-grow</span><br/>
                                         <input class="flexgrow input-group-text" type="number" value="0"><p></p>
-                                        <select id="align-self" class="custom-select">
+                                        <select class="custom-select align-self">
                                             <option disabled selected value> -- align-self -- </option>
-                                            <option value="flex-start">align-self:flex-start</option>
-                                            <option value="flex-end">align-self:flex-end</option>
+                                            <option value="stretch">align-self:stretch</option>
                                             <option value="center">align-self:center</option>
-                                            <option value="space-between">align-self:space-between</option>
-                                            <option value="space-around">align-self:space-around</option>
+                                            <option value="flex-start">align-self:start</option>
+                                            <option value="flex-end">align-self:end</option>
                                         </select><p></p>
                                     </div>`);
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
     $("select").on("change", setFlexAttr);
     $(".container").delegate(".orderdiv", "change", setFlexOrder);
     $(".container").delegate(".flexgrow", "change", setFlexGrow);
-    $(".container").delegate("#align-self", "change", setAlignSelf);
+    $(".container").delegate(".align-self", "change", setAlignSelf);
 
     function setFlexAttr() {
         var attrFlex = $(this).attr("id");
@@ -59,7 +59,7 @@ $(document).ready(function () {
     }
 
     function setAlignSelf() {
-        var asAttr = $(this).attr("id");
+        var asAttr = "align-self";
         var asVal = $("option:selected", this).val();
         console.log(asAttr + ":" + asVal);
         $(this).parent().css(asAttr, asVal);
@@ -75,6 +75,21 @@ $(document).ready(function () {
         containerCSS.flex_wrap.value = $("#flex-wrap").val();
         containerCSS.align_items.value = $("#align-items").val();
         containerCSS.align_content.value = $("#align-content").val();
+
+        containerCSS.children = [];
+        for (var i = 0; i < divcount; i++) {
+
+
+            var divname = "divjq" + (i + 1);
+            containerCSS.children.push(new contentCSS((i + 1), divname, null, null, null, null, null, null, null));
+            console.table(containerCSS.children);
+            containerCSS.children[i].order.value = $("#" + divname).find(".orderdiv").val();
+            console.log(containerCSS.children[i].order);                
+            containerCSS.children[i].flex_grow.value = $("#" + divname).find(".flexgrow").val();
+            console.log(containerCSS.children[i].flex_grow);                
+            containerCSS.children[i].align_self.value = $("#" + divname).find(".align-self").val();
+            console.log(containerCSS.children[i].align_self);            
+        }
         
         modal();
     });
