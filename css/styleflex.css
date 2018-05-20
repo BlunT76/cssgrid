@@ -67,3 +67,29 @@ input {
     position: fixed;
     z-index: 2;
 }
+
+
+.language-css{
+    background: #F8F9FA;
+    border-radius: 2px;
+}
+
+.code-css {
+    background: #F8F9FA;
+    border-left: solid 10px #018AB7;
+    border-right: solid 10px #018AB7;
+    border-radius: 10px;
+}
+
+.language-html {
+    background: #F8F9FA;
+    border-radius: 2px;
+}
+
+.code-html {
+    background: #F8F9FA;
+    border-left: solid 10px #EE5D23;
+    border-right: solid 10px #EE5D23;
+    border-radius: 10px;
+    
+}
