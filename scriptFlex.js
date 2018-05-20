@@ -15,13 +15,12 @@ $(document).ready(function () {
                                         <input class="orderdiv input-group-text" type="number" value="0"><br/>
                                         <span>flex-grow</span><br/>
                                         <input class="flexgrow input-group-text" type="number" value="0"><p></p>
-                                        <select id="align-self" class="custom-select">
+                                        <select class="custom-select align-self">
                                             <option disabled selected value> -- align-self -- </option>
-                                            <option value="flex-start">align-self:flex-start</option>
-                                            <option value="flex-end">align-self:flex-end</option>
+                                            <option value="stretch">align-self:stretch</option>
                                             <option value="center">align-self:center</option>
-                                            <option value="space-between">align-self:space-between</option>
-                                            <option value="space-around">align-self:space-around</option>
+                                            <option value="start">align-self:start</option>
+                                            <option value="end">align-self:end</option>
                                         </select><p></p>
                                     </div>`);
 
@@ -36,7 +35,7 @@ $(document).ready(function () {
     $("select").on("change", setFlexAttr);
     $(".container").delegate(".orderdiv", "change", setFlexOrder);
     $(".container").delegate(".flexgrow", "change", setFlexGrow);
-    $(".container").delegate("#align-self", "change", setAlignSelf);
+    $(".container").delegate(".align-self", "change", setAlignSelf);
 
     function setFlexAttr() {
         var attrFlex = $(this).attr("id");
@@ -60,7 +59,7 @@ $(document).ready(function () {
     }
 
     function setAlignSelf() {
-        var asAttr = $(this).attr("id");
+        var asAttr = "align-self";
         var asVal = $("option:selected", this).val();
         console.log(asAttr + ":" + asVal);
         $(this).parent().css(asAttr, asVal);
