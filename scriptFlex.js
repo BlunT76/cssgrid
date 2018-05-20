@@ -1,7 +1,8 @@
 $("#wrapper").toggleClass("toggled");
 
+var divcount = 0;
+
 $(document).ready(function () {
-    var divcount = 0;
     setFlexAttr();
     $(".divs").click(function () {
         var selection = $(this).attr("value");
@@ -75,6 +76,21 @@ $(document).ready(function () {
         containerCSS.flex_wrap.value = $("#flex-wrap").val();
         containerCSS.align_items.value = $("#align-items").val();
         containerCSS.align_content.value = $("#align-content").val();
+
+        containerCSS.children = [];
+        for (var i = 0; i < divcount; i++) {
+
+
+            var divname = "divjq" + (i + 1);
+            containerCSS.children.push(new contentCSS(divname, null, null, null, null, null, null, null));
+            console.table(containerCSS.children);
+            containerCSS.children[i].order.value = $("#" + divname).find(".orderdiv").val();
+            console.log(containerCSS.children[i].order);                
+            containerCSS.children[i].flex_grow.value = $("#" + divname).find(".flexgrow").val();
+            console.log(containerCSS.children[i].flex_grow);                
+            containerCSS.children[i].align_self.value = $("#" + divname).find(".align-self").val();
+            console.log(containerCSS.children[i].align_self);            
+        }
         
         modal();
     });

@@ -11,8 +11,9 @@
 
 $("#wrapper").toggleClass("toggled");
 
+var divcount = 0;
+
 $(document).ready(function () {
-    var divcount = 0;
     var gtc = "";
     var gtr = "";
     var cssgtc = "";
@@ -141,7 +142,22 @@ $(document).ready(function () {
             containerCSS.grid_row_gap.value = $("#RowGap").val() + "px";
             containerCSS.justify_items.value = $("#justify option:selected").val();
             containerCSS.align_items.value = $("#align option:selected").val();
-            
+
+            for (var i = 0; i < divcount; i++) {
+
+                var divname = "divjq" + (i + 1);
+                containerCSS.children.push(new contentCSS(divname, null, null, null, null, null, null, null));
+                console.table(containerCSS.children);
+                containerCSS.children[i].grid_row_start.value = $("#" + divname).find(".rowstart").val();
+                console.log(containerCSS.children[i].grid_row_start);                
+                containerCSS.children[i].grid_row_end.value = $("#" + divname).find(".rowend").val();
+                console.log(containerCSS.children[i].grid_row_end);                
+                containerCSS.children[i].grid_column_start.value = $("#" + divname).find(".colstart").val();
+                console.log(containerCSS.children[i].grid_column_start);                
+                containerCSS.children[i].grid_column_end.value = $("#" + divname).find(".colend").val();
+                console.log(containerCSS.children[i].grid_column_end);                
+            }
+
             modal();
         });
 

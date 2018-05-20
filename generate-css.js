@@ -37,15 +37,17 @@ var containerCSS = {
 // (et ce serait pénible d'itérer un grand nombre d'objets qui suivraient du coup le meme chéma que le "containerCSS".)
 class contentCSS {
 
-    constructor (divName, align_self_value, flex_grow_value, order_value, grid_row_value, grid_column_value) {
+    constructor (divName, align_self_value, flex_grow_value, order_value, grid_row_start_value, grid_row_end_value, grid_column_start_value, grid_column_end_value) {
         this.divName = divName
 // FLEX : sur les contenus
-        this.align_self = { name : "align-self", value : align_self_value };
-        this.flex_grow = { name : "flex-grox", value : flex_grow_value };
         this.order = { name : "order", value : order_value };
+        this.flex_grow = { name : "flex-grox", value : flex_grow_value };
+        this.align_self = { name : "align-self", value : align_self_value };
 // GRID : Sur les contenus
-        this.grid_row = { name : "grid-row", value : grid_row_value };
-        this.grid_column = { name : "grid-column", value : grid_column_value };
+        this.grid_row_start = { name : "grid-row-start", value : grid_row_start_value };
+        this.grid_row_end = { name : "grid-row-end", value : grid_row_end_value };
+        this.grid_column_start = { name : "grid-column-start", value : grid_column_start_value };
+        this.grid_column_end = { name : "grid-column-end", value : grid_column_end_value };
     }
 }
 
@@ -117,23 +119,21 @@ function modal(formatedCode) {
 
     //On passe aux div contenues dans le conteneur
     // A remplacer par un for of 
-    // for (child of containerCSS.children) {
-    // // Début de synthaxe de la propriété css d'un contenu        
-    //     contentCode.innerHTML += `.` + child.name + ` { <br>`;
-    // //
-    //     for (property of child) {
-    //         if (property.value != null) {
-    //             contentCode.innerHTML += `
-    //             .
-    //             ` + property.name + `
-    //                 : 
-    //             ` + property.value + `
-    //             ; <br>`;
-    //         }
-    //     }
-    // // Fermeture de la propriété css d'un contenu
-    //     contentCode.innerHTML += `} <br><br>`;
 
+    var containerMin = containerCSS.children;
+    for (child of containerMin) {
+    // Début de synthaxe de la propriété css d'un contenu        
+        contentCode.innerHTML += `.` + child.name + ` { <br>`;
+
+        for (property in child) {
+            if (child[property].value != null) {
+                contentCode.innerHTML += child[property].name + ` : ` + child[property].value + `; <br>`;
+            }
+        }
+    // Fermeture de la propriété css d'un contenu
+        contentCode.innerHTML += `} <br><br>`;
+
+    }
 }
 
 
