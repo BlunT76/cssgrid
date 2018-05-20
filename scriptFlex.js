@@ -81,7 +81,7 @@ $(document).ready(function () {
 
 
             var divname = "divjq" + (i + 1);
-            containerCSS.children.push(new contentCSS(divname, null, null, null, null, null, null, null));
+            containerCSS.children.push(new contentCSS((i + 1), divname, null, null, null, null, null, null, null));
             console.table(containerCSS.children);
             containerCSS.children[i].order.value = $("#" + divname).find(".orderdiv").val();
             console.log(containerCSS.children[i].order);                

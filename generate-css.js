@@ -37,8 +37,9 @@ var containerCSS = {
 // (et ce serait pénible d'itérer un grand nombre d'objets qui suivraient du coup le meme chéma que le "containerCSS".)
 class contentCSS {
 
-    constructor (divName, align_self_value, flex_grow_value, order_value, grid_row_start_value, grid_row_end_value, grid_column_start_value, grid_column_end_value) {
-        this.divName = divName
+    constructor (divID, divName, align_self_value, flex_grow_value, order_value, grid_row_start_value, grid_row_end_value, grid_column_start_value, grid_column_end_value) {
+        this.divName = divName;
+        this.divID = divID;
 // FLEX : sur les contenus
         this.order = { name : "order", value : order_value };
         this.flex_grow = { name : "flex-grox", value : flex_grow_value };
@@ -95,7 +96,7 @@ function modal(formatedCode) {
     var contentCode = document.getElementById("content-code");
     //On commence par instancier les propriétés du conteneur
     // Début de synthaxe de la propriété css conteneur
-    containerCode.innerHTML += `.container { <br>`; 
+    containerCode.innerHTML += `.parent { <br>`; 
     // 
     for (property in containerCSS) {
         console.log("name of container's property : " + containerCSS[property].name);
@@ -114,8 +115,9 @@ function modal(formatedCode) {
 
     var containerMin = containerCSS.children;
     for (child of containerMin) {
-    // Début de synthaxe de la propriété css d'un contenu        
-        contentCode.innerHTML += `.` + child.name + ` { <br>`;
+    // Début de synthaxe de la propriété css d'un contenu     
+
+        contentCode.innerHTML += `.` + `child_` + child.divID + ` { <br>`;
 
         for (property in child) {
             if (child[property].value != null) {

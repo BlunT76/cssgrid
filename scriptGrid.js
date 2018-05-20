@@ -146,7 +146,7 @@ $(document).ready(function () {
             for (var i = 0; i < divcount; i++) {
 
                 var divname = "divjq" + (i + 1);
-                containerCSS.children.push(new contentCSS(divname, null, null, null, null, null, null, null));
+                containerCSS.children.push(new contentCSS((i + 1), divname, null, null, null, null, null, null, null));
                 console.table(containerCSS.children);
                 containerCSS.children[i].grid_row_start.value = $("#" + divname).find(".rowstart").val();
                 console.log(containerCSS.children[i].grid_row_start);                
