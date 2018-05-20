@@ -18,7 +18,7 @@ var containerCSS = {
     // flex_grow : { name : "flex-grow", value : null},
     // align_self : { name : "align-self", value : null},
     // order : { name : "order", value : null},
-    
+
     // GRID : Sur les containers
     grid_template : { name : "grid-template", value : null},
     grid_template_rows : { name : "grid-template-rows", value : null},
@@ -83,15 +83,19 @@ function modal(formatedCode) {
 
     // CODE DE FORMATAGE ET D'INSTANCIATION DES PROPRIETES
 
-    var gCode =  document.getElementById("generated-code");
+    var gCode =  document.getElementById("code-inside");
     // Créé les deux paragraphe qui acceuilleront le css
     gCode.innerHTML = 
-    `<code id="container-code">
-    /* Container's CSS */ <br>
-    </code>
-    <p id="content-code">
-    /* Contents' CSS */ <br>
-    </p>`;
+    `<pre class="code-css language-css">
+        <code id="container-code" class="language-css">
+            /* Container's CSS */ <br>
+        </code>
+    </pre>
+    <pre class="code-css language-css">
+        <code id="content-code">
+           /* Contents' CSS */ <br>
+        </code>
+    </pre>`;
 
     var containerCode = document.getElementById("container-code");
     var contentCode = document.getElementById("content-code");
@@ -105,12 +109,7 @@ function modal(formatedCode) {
 
         if (containerCSS[property].value != null) {
 
-            containerCode.innerHTML += `
-            .
-           ` + containerCSS[property].name + `
-             : 
-           ` + containerCSS[property].value + `
-           ; <br>`;
+            containerCode.innerHTML += `` + containerCSS[property].name + ` : ` + containerCSS[property].value + `; <br>`;
          }
     }
     // Fermeture de la propriété css conteneur
@@ -135,4 +134,13 @@ function modal(formatedCode) {
     // // Fermeture de la propriété css d'un contenu
     //     contentCode.innerHTML += `} <br><br>`;
 
+}
+
+
+function copyToCLipBoard () {
+    
+    var copiedCode = document.getElementById("code-inside");
+    copiedCode.select();
+    document.execCommand("copy");
+    alert("Code copié: " + copiedCode.value);
 }
