@@ -52,7 +52,11 @@ body {
     margin-bottom: 5px;
 }
 
-.footer-contact p { word-wrap: break-word; }
+.footer-contact { 
+    word-wrap: break-word; 
+    border-left-style: groove;
+    border-left-color: white;
+}
 
 
 
