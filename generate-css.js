@@ -42,7 +42,7 @@ class contentCSS {
         this.divID = divID;
 // FLEX : sur les contenus
         this.order = { name : "order", value : order_value };
-        this.flex_grow = { name : "flex-grox", value : flex_grow_value };
+        this.flex_grow = { name : "flex-grow", value : flex_grow_value };
         this.align_self = { name : "align-self", value : align_self_value };
 // GRID : Sur les contenus
         this.grid_row_start = { name : "grid-row-start", value : grid_row_start_value };
