@@ -19,8 +19,8 @@ $(document).ready(function () {
                                             <option disabled selected value> -- align-self -- </option>
                                             <option value="stretch">align-self:stretch</option>
                                             <option value="center">align-self:center</option>
-                                            <option value="start">align-self:start</option>
-                                            <option value="end">align-self:end</option>
+                                            <option value="flex-start">align-self:start</option>
+                                            <option value="flex-end">align-self:end</option>
                                         </select><p></p>
                                     </div>`);
 
