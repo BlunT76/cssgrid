@@ -64,25 +64,33 @@
             
             <h3 class="text-left text-info">Utilisation</h3>
             <p>Tout simplement en appliquant la déclaration <strong><code class="language-css">display: grid</code></strong> ou <strong><code class="language-css">display: flex</code></strong> à un élément conteneur qui constituera la trame générale, il deviendra un "grid-container" ou "flex-container" et ses enfants directs des "grid-items" ou des "flex-items".</p>
-
-            <h2 class="text-warning">La pratique:</h2>
-            <p>Rien de mieux que la pratique pour apprendre. Afin de tester les principales propriétés de css grid, nous avons codé une page qui permet de tester css grid en live </p>
-
-            <img class="img-fluid" src="./images/grid_pads.png">
-            <p class="text-center">ex: 4 div sur 2 lignes et 2 colonnes</p>
-
-            <img class="img-fluid" src="./images/grid_layout.png">
-            <p class="text-center">ex: 3 div en disposition header sidebar content</p>
+            <p>Flex et Grid sont complémentaires!! Par ex, il est tout à fait envisageable d'utiliser flex à l'intérieur d'un grid-items.</p>
+            
             <hr class="bg-light mb-5">
 
-            <h3 class="text-info">Comment ca marche?</h3>
+            <h3 class="text-info">Compatibilité des navigateurs</h3>
+            <p class="mb-1">Flex est très bien supporté sur la majorité des navigateurs, y compris sur mobile.</p>
+            <img src="images/flex_compatibility.png" class="img-fluid">
+            <p class="mb-1 mt-4">Grid est très bien supporté sur la majorité des navigateurs, sauf Opera Mini sur mobile qui ne le supporte pas du tout.</p>
+            <img src="images/grid_compatibility.png" class="img-fluid">
+            <p><a href="https://caniuse.com/">Sources</a></p>
+            <hr class="bg-light mb-5">
+
+            <h3 class="text-info">Comment les comparer ??</h3>
+            <p>Rien de mieux que la pratique pour apprendre. Afin de tester les principales propriétés de Grid et Flex, nous avons codé 2 utilitaires qui permettent de les tester en live.</p>
+            <div class="text-center">
+            <span >
+            <a class="btn btn-success mr-5" href="pagegrid.html">Tester CSS Grid</a>
+            <a class="btn btn-success ml-5" href="pageflex.html">Tester Flex-Box</a>
+            </span>
+                </div>
+
+            <h4>Comment ca marche?</h4>
             <p class="text-light">Appuyez sur les boutons plus et moins pour ajouter ou enlever des div</p>
             <p class="text-light">Appuyez sur le sélecteur display et choisissez display: grid, flex ou flex-inline(suivant le mode a tester) </p>
             <p class="text-light">Utilisez les flèches Haut et Bas sur les input pour modifier les valeurs</p>
             <img class="rounded mx-auto d-block" src="./images/touche.jpg">
-            <p>
-                <a class="btn btn-success" href="pagegrid.html">Tester CSS Grid</a></p>
-            <hr class="bg-light mb-5">
+            
 
 
 
