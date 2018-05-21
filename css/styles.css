@@ -7,7 +7,7 @@ body {
     font-size: 0.8em;
 }
 
-.language-css{
+.language-css {
     background: #F8F9FA;
     border-radius: 2px;
 }
@@ -29,42 +29,13 @@ body {
     border-left: solid 10px #EE5D23;
     border-right: solid 10px #EE5D23;
     border-radius: 10px;
-    
+
 }
 
-.flexpart{
-    border-left: 1px;
-    border-left-color: white;
-    border-left-style: groove;
+@media (min-width: 992px) {
+    .flexpart {
+        border-left: 1px;
+        border-left-color: white;
+        border-left-style: groove;
+    }
 }
-
-/*Footer CSS*/
-.footer-top { 
-    padding: 10px 0; 
-    background: #333; 
-    text-align: left; 
-    color: #aaa; 
-}
-
-.footer-about img.logo-footer { 
-    max-width: 35px; 
-    margin-top: 0; 
-    margin-bottom: 5px;
-}
-
-.footer-contact { 
-    word-wrap: break-word; 
-    border-left-style: groove;
-    border-left-color: white;
-}
-
-
-
-
-
-
-
-
-
-
-
